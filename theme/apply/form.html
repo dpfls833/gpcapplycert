@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="moodle, GPC 인증 신청 시스템" />
+    <meta name="description" content="GPC 인증 신청 시스템" />
+    <title>GPC 인증 신청 시스템</title>
+    <!-- 파비콘 연결 -->
+    <link rel="shortcut icon" href="//3.36.181.167/pluginfile.php/1/theme_mb2nl/favicon/1655248541/favicon.ico" />
+    <!-- Bootstrap 연결 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome 연결 -->
+    <script src="https://kit.fontawesome.com/3fa2bab9a8.js" crossorigin="anonymous"></script>
+    <!-- CSS/Javascript 파일 연결 -->
+    <link rel="stylesheet" href="/theme/css/default.css">
+    <link rel="stylesheet" href="/theme/css/design.css">
+    <link rel="stylesheet" href="/theme/css/subpage_design.css">
+    <link rel="stylesheet" href="/theme/css/responsive.css">
+    <script type="text/javascript" src="/theme/js/design.js"></script> 
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header w3-include-html="header.html"></header>
+    <div id="page-b">
+        <div id="sub-content">
+            <div class="breadcrumb_bg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="col-md-12">
+                            <ul class="breadcrumb">
+                                <li><a href="#">Home</a></li>
+                                <li>자격 등록신청</li>
+                            </ul>
+                            <h1>자격 등록신청</h1>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tt_wh">
+                                <h2 class="point_col">자격 등록신청</h2>
+                                <p class="tt_line"></p>
+                            </div>
+                            <div id="form01">
+                                <form name="fm_write" class="" method="post" enctype="multipart/form-data">
+                                    <table class="type01">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">이메일</th>
+                                                <td>
+                                                    <input type="text" id="cer_code" name="cer_code" value="" disabled="disabled" style="width: 100%;border: 1px solid #bbb;">
+                                                </td>
+                                                <th scope="row">비밀번호</th>
+                                                <td>
+                                                    <input type="text" id="pass_word" name="pass_word" value="" disabled="disabled" style="width: 100%;border: 1px solid #bbb;">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div style="margin: 2rem 0 0;display: flex;">
+                                        <span style="line-height: 2.88;">* 최초등록 또는 전환하시는 경우 인증번호와 비밀번호는 입력하지 않으셔도 됩니다.</span>
+                                        <a href="/inquiry.html" class="btn btn-outline-primary" style="margin-left: auto;">신청내역 확인</a>
+                                    </div>
+
+                                    <p class="con_tt">심사원 신청 자격 구분</p>
+                                    <div class="text-box bg" style="margin: 0 0 2rem;">
+                                        <span style="line-height: 2.88;">신청하시려는 ISO 규격과 등급을 선택하여 주십시오.</span>
+                                    </div>
+                                    
+                                    <table class="type01">
+                                        <thead>
+                                            <tr style="display:none">
+                                                <th scope="cols"></th>
+                                                <th scope="cols"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">신청규격</th>
+                                                <td colspan="3">
+                                                    <ul class="chk">
+                                                        <li><label><input type="checkbox" id="chk1" name="chk1" checked="">ISO 9001:2015</label></li>
+                                                        <li><label><input type="checkbox" id="chk2" name="chk2">ISO 14001:2015</label></li>
+                                                        <li><label><input type="checkbox" id="chk3" name="chk3">ISO 45001:2018</label></li>
+                                                        <li><label><input type="checkbox" id="chk4" name="chk4">ISO 22000:2018</label></li>
+                                                        <li><label><input type="checkbox" id="chk5" name="chk5">ISO 27001:2013</label></li>
+                                                        <li><label><input type="checkbox" id="chk6" name="chk6">ISO 13485:2016</label></li>
+                                                        <li><label><input type="checkbox" id="chk7" name="chk7">ISO 20000-1:2018</label></li>
+                                                        <li><label><input type="checkbox" id="chk8" name="chk8">ISO 22301:2019</label></li>
+                                                        <li><label><input type="checkbox" id="chk9" name="chk9">ISO 21001:2018</label></li>
+                                                        <li><label><input type="checkbox" id="chk10" name="chk10">ISO 37001:2016</label></li>
+                                                        <li><label><input type="checkbox" id="chk11" name="chk11">ISO 22716:2007</label></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등급</th>
+                                                <td colspan="3">
+                                                    <ul class="chk_radio">
+                                                        <li><label><input type="radio" name="chk_grd" value="chk_grd1" checked="">심사원보</label></li>
+                                                        <li><label><input type="radio" name="chk_grd" value="chk_grd2">심사원</label></li>
+                                                        <li><label><input type="radio" name="chk_grd" value="chk_grd3">선임심사원</label></li>
+                                                        <li><label><input type="radio" name="chk_grd" value="chk_grd4">검증심사원</label></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">유형</th>
+                                                <td colspan="3">
+                                                    <ul class="chk_radio check_radio_type">
+                                                        <li><label><input type="radio" name="chk_tp" value="0" checked="">최초인증</label></li>
+                                                        <li><label><input type="radio" name="chk_tp" value="1">사후</label></li>
+                                                        <li><label><input type="radio" name="chk_tp" value="1">갱신</label></li>
+                                                        <li><label><input type="radio" name="chk_tp" value="1">규격추가</label></li>
+                                                        <li><label><input type="radio" name="chk_tp" value="1">등급변경</label></li>
+                                                        <li><label><input type="radio" name="chk_tp" value="0">전환</label></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div style="text-align:center;margin-top:30px">
+                                        <input type="button" name="checkButton" id="submitAction" class="btn btn-lg btn-primary" style="font-weight:400;" value="신청서 제출">
+                                    </div>
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page-outer -->
+    <ul class="theme-static-content theme-iconnav" style="margin-top: -57px;">
+        <li class="theme-static-item1">
+            <a class="link-replace" href="#">
+                <span class="static-icon"><i class="fa fa-life-ring"></i></span>
+                <span class="text">Link with icon</span>
+            </a>
+        </li>
+        <li class="theme-static-item2">
+            <a class="link-replace" href="#" target="_blank">
+                <span class="static-icon"><i class="fa fa-link"></i></span>
+                <span class="text">Link with icon open in a new window</span>
+            </a>
+        </li>
+        <li class="theme-static-item3">
+            <span class="link-replace"><span class="static-icon"><i class="fa fa-unlock"></i></span><span class="text">Text for guests</span></span>
+        </li>
+    </ul>
+    <button onclick="topFunction()" id="btn_top" title="Go to top"><i class="fa fa-angle-up"></i></button>
+    <footer w3-include-html="footer.html"></footer>
+
+    <!-- design.js -->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        includeHTML();
+    </script>
+
+    <script>
+        $("#submitAction").click(function(){
+            
+            console.log( "cer_code==="+$("#cer_code").val() );
+            console.log( "pass_word==="+$("#pass_word").val() );
+            console.log( "kind==="+$("#kind").val() );
+            console.log( "name_ko==="+$("#name_ko").val() );
+            console.log( "name_en==="+$("#name_en").val() );
+            console.log( "hp==="+$("#hp").val() );
+            console.log( "email==="+$("#email").val() );
+
+            console.log( $('input:checkbox[id="chk1"]').is(":checked") );
+            console.log( $('input:checkbox[id="chk2"]').is(":checked") );
+            console.log( $('input:checkbox[id="chk3"]').is(":checked") );
+            console.log( $('input:checkbox[id="chk4"]').is(":checked") );
+            console.log( $('input:checkbox[id="chk5"]').is(":checked") );
+            console.log( $('input:checkbox[id="chk6"]').is(":checked") );
+            console.log( $('input:checkbox[id="chk7"]').is(":checked") );
+            
+            
+            o_OBJ = $('form[name=fm_write]').serialize();
+            $.ajax({
+                url: 'save_db.php',
+                data : o_OBJ,
+                //data : {'hand':'del','idx':idx},
+                dataType: "html",
+                type : 'POST',
+                timeout : 1000,
+                error : function( xhr, ajaxOptions, thrownError ) {
+                    // alert( "재확인 후 다시 제출해주시길 바랍니다." );
+                    location.href="form_personal.html";
+                },
+                
+                success: function(data) {
+                    console.log(data);
+                    location.href="form.php";
+                    //if( data.code == "OK" ) {
+                        //alert( data.msg );
+                        //document.location.reload();
+                        //location.href="list.php";
+                    //}
+                    //else if( data.code == "ERR" ) {
+                        //alert( data.msg );
+                    //}
+                }
+            });
+            
+        });
+    </script>
+</body>
+</html>
