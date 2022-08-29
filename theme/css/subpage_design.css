@@ -7,7 +7,7 @@
 .breadcrumb_bg { background: url('/images/banner.png') no-repeat;background-size: cover;background-position: center; }
 .breadcrumb_bg.introduce { background: url('/images/banner_02.png') }
 .breadcrumb { margin: 1rem 0; }
-.breadcrumb li {display: inline;font-size: 1.4rem;}
+.breadcrumb li {display: inline;font-size: 1rem;} /* 1.4rem 임의수정 */
 .breadcrumb li+li:before {padding: 8px;color: black;content: "\003E";}
 
 
@@ -444,3 +444,351 @@ label.required::after {
 
 
 .collapse.in { display: block; }
+
+/* =================================================== sub page - 등록신청페이지 ==================================================== */
+html{font-size:15px;}
+body {
+    margin:0;
+    background-color: #fff;
+    font-family: 'Roboto',sans-serif;
+    color: #4c4c4c;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.67;
+}
+.form_wrap{
+    font-size:0.95rem;
+    line-height: 2;
+    padding:5rem 0;
+    color:#333;
+    font-weight:400;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_tt {
+    display: flex;
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.content_tt:after {
+    content: "";
+    flex-grow: 1;
+    background: #ddd;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin-left: 16px;
+}
+/*  step navigation  */
+.step_navi{
+    width:100%;
+    height:auto;
+    margin-bottom:80px;
+}
+.step_navi ul{ 
+    width:100%; 
+    display: flex;
+
+}
+.step_navi ul li{
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    display: inline-block;
+    width:calc(100%/3);
+    height:auto;
+    margin-right:3px;
+    position: relative;
+    background:#e9e9e9;
+}
+.step_navi ul li:last-child{ margin-right:0; }
+.step_navi ul li p{
+    margin-bottom:0rem;
+    text-align:left;
+    font-weight:500;
+    font-size:1.1rem;
+    color:#999;
+    padding:12px 20px;
+}
+.step_navi ul li p span{ display:block; }
+.step_navi ul li.active{ background:#27323a; } /* active 적용 - 배경 컬러 변경 */
+.step_navi ul li.active p{ color:#fff; } /* active 적용 - 텍스트 컬러 변경 */
+
+.arrow{ /* -> 화살표 */
+    width:32px;
+    height:32px;
+    position:absolute;
+    margin-bottom:30px;
+    top:30px;
+    right:30px;
+}
+.arrow::before, .arrow::after{
+    content:"";
+    position:absolute;
+}
+.arrow::before{
+    width:100%;
+    height:100%;
+    border:2px solid #fff;
+    border-right:0;
+    border-bottom:0;
+}
+.arrow::after{
+    width:48px;
+    height:2px;
+    background:#fff;
+    transform-origin: 0 100%;
+    transform:rotate(45deg);
+}
+.arrow-right{ transform:rotate(135deg); }
+/* 타이틀 */
+h6.content_box_tt{ /* 컨텐츠 내 작은 타이틀 */
+    font-size:1.3rem;
+    font-weight:600;
+    color:#333;
+    margin-bottom:1.5rem;
+}
+h6.content_box_tt:before{ /* 컨텐츠 내 작은 타이틀 옆 세로 보더 */
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background: #F29600;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+h6.content_box_tt2{ /* 등록정보 페이지 내 작은 타이틀 */
+    margin-top:50px;
+}
+/* checklist_box */
+.checklist_box{  /* 상단 제출서류 안내 박스 */
+    height:auto;
+    padding:20px 25px;
+    background:#f9f9f9;
+}
+.checklist_box ul{ padding-left:0px; }
+.checklist_box ul li{
+    list-style: none;
+    padding-bottom:10px;
+}
+.checklist_box ul li a{
+    display: inline-block;
+    color:#df452a;
+    text-decoration: none;
+}
+.checklist_box ul li:last-child{ padding-bottom:0px; }
+.icon_comment{
+    font-size:1.3rem;
+    margin-right:2px;
+    vertical-align: middle;
+}
+
+/*  Table  */
+table{ font-size:inherit; }
+.apply_table {
+    width:100%;
+    border-collapse: collapse;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0 auto;
+    margin-top:30px;
+}
+.apply_table thead tr { width: 100%; }
+.apply_table thead th {
+    text-align: left;
+    padding: 12px 25px;
+    font-weight: 500;
+    border-bottom: 1px solid #666;
+    background: #f7f7f7;
+}
+.apply_table>tbody{ border-top: 1px solid #27323a; }
+.apply_table tbody th {
+    text-align: left;
+    width: 15%;
+    height: 60px;
+    padding: 12px 25px;
+    font-weight: 500;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    background: #f7f7f7;
+}
+.apply_table td {
+    width: 350px;
+    padding: 12px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+.apply_table td p{ margin-bottom:0.3rem; }
+.essential{ /* 테이블명 옆 필수표시(*) */
+    color:#e63946;
+    vertical-align: middle;
+    font-size:1.1rem;
+    display:inline-block;
+    margin-left:1px;
+}
+ /*  in_table  */
+ .in_table{ /* 제출문서 내 테이블 */
+    width:100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+.in_table .bd_right{border-right:1px solid #ddd;}
+ /*  등록정보조회 페이지 수평정렬 테이블  */
+.apply_table_horizon { text-align: center; }
+.apply_table_horizon thead{ border-top: 1px solid #27323a; }
+.apply_table_horizon thead th { 
+    text-align:center;
+    padding: 12px 10px; 
+    border-bottom: 1px solid #ddd;
+}
+.apply_table_horizon td { padding: 15px; }
+
+
+/* ==== input ==== */
+input[type=text], 
+input[type=number], 
+input[type=tel], 
+input[type=password], 
+select{ /* 전체 텍스트 입력란, select 선택란 */
+    width:60%;
+    font-family: inherit;
+    font-size:0.9rem;
+    padding:5px;
+    border-radius:0px;
+    border:1px solid #bbb;
+    color:#555;
+    background:#fff;
+}
+label.type_checkbox{ 
+    width:24.6%; 
+    margin-bottom: 0.5rem;
+}
+label.type_checkbox2{ 
+    width:200px; 
+    text-align:right;
+}
+label.type_radio{ margin-right:8px; }
+input#zipcode{ width:180px;margin-bottom:3px; } /* 우편번호 입력란 */
+input#address1{ width:45%;margin-bottom:3px; } /* 주소 입력란 */
+input#address2, input#extraAddress{ width:35%;margin-right:3px; } /* 상세주소, 참고항목 입력란 */
+
+/*  button  */
+button{ cursor:pointer; } /* 버튼 */
+.apply_chk{ text-align:right; } /* 신청 진행상황 조회 버튼 */
+.apply_chk_btn{
+    /* background:#13bd6e;
+    border:none;
+    color:#fff; */
+    display: inline-block;;
+    width:160px;
+    margin-top:15px;
+    background: #fff;
+    border: 1px solid #bbb;
+    color: #333;
+    padding:5px 16px;
+    font-size: 0.9rem;
+    text-align:center;
+    border-radius: 0;
+    transition:all 0.1s;
+}
+.apply_chk2{ text-align:center; } /* 신청번호 확인 버튼 */
+.apply_chk_btn_2{ width:60px; }
+a.btn{ /* 신청하기 버튼 */
+    background:#0982ff;
+    border:none;
+    color:#fff;
+    padding:8px 20px;
+    font-size: 0.9rem;
+    vertical-align:top;
+    border-radius: 0;
+    transition:all 0.1s;
+    line-height:1.5;
+}
+a.btn:hover{ background:#0370e1;color:#fff; }
+button#btn_zip{ /* 우편번호확인 버튼 */
+    background:#13bd6e;
+    border:1px solid #13bd6e;
+    color:#fff;
+    padding:4px 8px;
+    font-size: 0.75rem;
+    vertical-align:top;
+}
+button#submitAction{ /* 신청하기 버튼 */
+    background:#0982ff;
+    border:none;
+    color:#fff;
+    padding:8px 20px;
+    font-size: 0.9rem;
+    vertical-align:top;
+    transition:all 0.1s;
+}
+a#submitAction{ /* 신청하기 버튼 */
+    display:inline-block;
+    background:#0982ff;
+    border:none;
+    color:#fff;
+    padding:8px 20px;
+    font-size: 0.9rem;
+    vertical-align:top;
+    transition:all 0.1s;
+}
+button#submitAction:hover{ background:#0370e1;}
+.btn_return a{
+    display: block;
+    width:130px;
+    height:46px;
+    line-height: 46px;
+    background:#0982ff;
+    margin:40px auto 0;
+    text-align:center;
+    color:#fff;
+    text-decoration: none;
+}
+.btn_return a:hover{ color:#fff; }
+
+ /*  cert_process  */
+ .cert_process{ margin:30px 0; }
+ .cert_process_tt{ font-weight:500; }
+ .cert_process_box{
+    width:100%;
+    height:auto;
+    margin-top:15px;
+    font-size:0.9rem;
+ }
+ .cert_process_box ul li{
+    display:inline-block;
+    width:15.2%;
+    height:80px;
+    margin-right:1%;
+    background:#fff;
+    border: 1px solid #666;
+    vertical-align: middle;
+    text-align:center;
+    font-weight:500;
+    padding:22px 10px;
+
+ }
+ .cert_process_box ul li span{
+    display:block;
+    font-size:0.75rem;
+ }
+.arrow-next { /* > 화살표 */
+    position: relative;
+    /* float:left; */
+    width:100%;
+    height:10px;
+    /* margin-right:5px; */
+}
+.arrow-next::after {
+    position: absolute;
+    right: -21px; 
+    bottom: 20px; 
+    content: '';
+    width: 15px; /* 사이즈 */
+    height: 15px; /* 사이즈 */
+    border-top: 1px solid #27323a; /* 선 두께 */
+    border-right: 1px solid #27323a; /* 선 두께 */
+    transform: rotate(45deg); /* 각도 */
+}
