@@ -37,61 +37,6 @@ function mbmenuFunction() {
   }
 };
 
-// 모바일버전(해상도 768px) 1Depth 클릭시 Main Navigation Drop 이벤트
-// var dropdown = document.getElementsByClassName("drop-btn");
-// var i;
-
-// for (i = 0; i < dropdown.length; i++) {
-//   dropdown[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     var dropdownContent = document.getElementsByClassName("dropdown-menu");
-//     if (dropdownContent.style.display === "block") {
-//       dropdownContent.style.display = "none";
-//     } else {
-//       dropdownContent.style.display = "block";
-//     }
-//   });
-// }
-
-// $(document).ready(function(){
-// memu 클래스 바로 하위에 있는 a 태그를 클릭했을때        
-//   $(".dropdown>a").click(function(){
-//     var submenu = $(this).next("ul");
-//     if( submenu.is(":visible") ){
-//       submenu.slideUp();
-//     }else{
-//       submenu.slideDown();
-//     }
-//   });
-// });
-
-// $(function(){         
-//   //메뉴 슬라이드
-//   $('.dropdown-toggle').click(function(){
-//       $(this).next($('.dropdown-menu')).slideToggle('fast');
-//   })
-
-//   // 버튼 클릭 시 스타일 변경
-//   $('.dropdown-toggle').focus(function(){
-//       $(this).addClass('active');
-//   })
-//   $(".dropdown-toggle").blur(function(){
-//       $(this).removeClass('active');
-//   })
-
-// })
-
-// $(document).ready(function(){
-// 	$(".dropdown-toggle").click(function(){
-// 		if($(".dropdown-menu").is(":visible")){
-// 			$(".dropdown-menu").slideUp();
-// 		}else{
-// 			$(".dropdown-menu").slideDown();
-// 		}
-// 	});
-// });
-
-
 
 // 스크롤값에 따라 Navigation 최상단에 고정 & TOP 버튼 생성
 function scrollFunction() {
