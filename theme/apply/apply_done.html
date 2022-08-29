@@ -48,10 +48,70 @@
                                 <h2 class="point_col">등록 신청 완료</h2>
                                 <p class="tt_line"></p>
                             </div>
-                            <div>
-                                <button>심사원시험</button>
-                                <button>CPD교육</button>
-                                <button onclick="location.href='inquiry.html'">신청진행상황조회</button>
+                            <div class="text-box bg" style="margin: 0 0 2rem;">
+                                <span style="line-height: 2.88;"><span style="font-weight: 600;">홍길동</span>님의 신청이 정상적으로 처리되었습니다.
+                            </div>
+                            <div id="form01">
+                                <form name="fm_write" class="" method="post" enctype="multipart/form-data" >
+                                <input type="hidden" id="hand" name="hand" value="reg">
+                            
+                                    <table class="type01">
+                                        <thead>
+                                            <tr style="display:none">
+                                                <th scope="cols"></th>
+                                                <th scope="cols"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">성명</th>
+                                                <td colspan="3">
+                                                    홍길동
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">신청규격</th>
+                                                <td colspan="3">
+                                                    ISO 9001:2015
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등급</th>
+                                                <td>
+                                                    심사원
+                                                </td>
+                                                <th scope="row">유형</th>
+                                                <td>
+                                                    최초인증
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">결제금액</th>
+                                                <td>
+                                                    110,000원
+                                                </td>
+                                                <th scope="row">결제수단</th>
+                                                <td>
+                                                    무통장
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="con_tt">입금내역 안내</p>
+                                    <div class="text-box bd">
+                                        입금하실 금액은 <span style="color: #e63946;font-weight: 600;">110,000원</span>이며, 입금하실 계좌는 <span style="color: #e63946;font-weight: 600;">국민은행 873237-04-001683 예금주: (주)아이지씨인증원</span> 입니다.<br>
+                                        다시 한번 확인하여 주시기 바랍니다.<br>
+                                        반드시 비용이 입금되어야 신청이 완료됩니다. 입금 후 연락주시기 바랍니다.(Tel. 02-6749-0711)<br><br>
+                                        신청 접수 인증코드는 <span style="color: #e63946;font-weight: 600;">[1912201137B00]</span> 입니다.<br>
+                                        인증코드는 신청내역 확인시 필요합니다.
+                                    </div>
+
+                                    <div style="text-align:center;margin-top:30px">
+                                        <button class="btn btn-lg btn-success">심사원시험</button>
+                                        <button class="btn btn-lg btn-success">CPD교육</button>
+                                        <button onclick="location.href='inquiry.html'">신청진행상황조회</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -80,11 +140,13 @@
     </ul>
     <button onclick="topFunction()" id="btn_top" title="Go to top"><i class="fa fa-angle-up"></i></button>
     <footer w3-include-html="footer.html"></footer>
-
+    
     <!-- design.js -->
     <script>
         window.onscroll = function() {scrollFunction()};
         includeHTML();
     </script>
+
+    
 </body>
 </html>
