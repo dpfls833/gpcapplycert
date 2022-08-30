@@ -623,12 +623,12 @@
                     timeout : 1000,
                     error : function( xhr, ajaxOptions, thrownError ) {
                         // alert( "재확인 후 다시 제출해주시길 바랍니다." );
-                        location.href="apply_done.html";
+                        location.href="apply_confirm.html";
                     },
                     
                     success: function(data) {
                         console.log(data);
-                        location.href="personal_data.php";
+                        location.href="apply.php";
                         //if( data.code == "OK" ) {
                             //alert( data.msg );
                             //document.location.reload();
