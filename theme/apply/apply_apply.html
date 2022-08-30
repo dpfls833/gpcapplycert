@@ -15,11 +15,11 @@
     <!-- Fontawesome 연결 -->
     <script src="https://kit.fontawesome.com/3fa2bab9a8.js" crossorigin="anonymous"></script>
     <!-- CSS/Javascript 파일 연결 -->
-    <link rel="stylesheet" href="/theme/css/default.css">
-    <link rel="stylesheet" href="/theme/css/design.css">
-    <link rel="stylesheet" href="/theme/css/subpage_design.css">
-    <link rel="stylesheet" href="/theme/css/responsive.css">
-    <script type="text/javascript" src="/theme/js/design.js"></script> 
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/design.css">
+    <link rel="stylesheet" href="../css/subpage_design.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script type="text/javascript" src="../js/design.js"></script> 
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -46,6 +46,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
+                            <!-- STRAT : form wrap -->
                             <div class="form_wrap">
                                 <div class="content_tt" style="color:#27323a;">
                                     자격정보 입력
@@ -59,102 +60,163 @@
                                             <div class="arrow arrow-right"></div>
                                         </li>
                                         <li>
-                                            <a href="../apply/apply_apply.html">
+                                            <a href="../apply/apply.html">
                                                 <p><span>STEP 2.</span>신청자 정보 입력</p>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/apply/list_3page.html">
+                                            <a href="../apply/apply_confirm.html">
                                                 <p><span>STEP 3.</span>등록 신청 완료</p>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-
-                                <div id="form01">
-                                    <form name="fm_write" class="" method="post" enctype="multipart/form-data">
-                                        <h6 class="content_box_tt content_box_tt2">신청내역확인</h6>
-                                        <table class="apply_table">
-                                            <tbody>
+                                
+                                <form name="fm_write" class="" method="post" enctype="multipart/form-data">
+                                    <!-- 신청내역확인 -->
+                                    <h6 class="content_box_tt">신청내역확인</h6>
+                                    <table class="apply_table">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">아이디(E-mail)</th>
+                                                <td>
+                                                    <input type="text" id="cer_code" name="cer_code" value="">
+                                                </td>
+                                                <th scope="row">비밀번호</th>
+                                                <td>
+                                                    <input type="text" id="pass_word" name="pass_word" value="">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="apply_chk" style="margin: 2rem 0 0;display: flex;">
+                                        <button class="apply_chk_btn" onclick="onDisplay()" style="margin-left: auto;">신청내역확인</a>
+                                    </div>
+                                    <div class="apply_info" style="display:none;"> 
+                                        <table class="apply_table apply_table_horizon">
+                                            <colgroup>
+                                                <col style="width:3%"> <!-- 체크박스 -->
+                                                <col style="width:3%"> <!-- 순서 -->
+                                                <col style="width:9%"> <!-- 이름(영문) -->
+                                                <col style="width:10%"> <!-- 전화번호 -->
+                                                <col style="width:15%" class="only_pc"> <!-- E-Mail -->
+                                                <col style="width:15%" class="only_pc"> <!-- 주소 -->
+                                                <col style="width:10%"> <!-- 등록일 -->
+                                                <col style="width:10%"> <!-- 상세보기 -->
+                                            </colgroup>
+                                            <thead>
                                                 <tr>
-                                                    <th scope="row">이메일</th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">순서</th>
+                                                    <th scope="col">이름</th>
+                                                    <th scope="col">전화번호</th>
+                                                    <th scope="col" class="only_pc">E-mail</th>
+                                                    <th scope="col" class="only_pc">주소</th>
+                                                    <!-- <th scope="col">상세주소</th> -->
+                                                    <th scope="col">등록일</th>		
+                                                    <th scope="col">상세보기</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr> <!-- 1번째 줄 -->
+                                                    <td>								
+                                                        <input type="checkbox" name="chk_wr_id[]" value="" >
+                                                    </td> 
+                                                    <td>3</td>
+
+                                                    <td>김제니</td>
+
                                                     <td>
-                                                        <input type="text" id="cer_code" name="cer_code" value="" disabled="disabled">
+                                                        010-2222-3333
                                                     </td>
-                                                    <th scope="row">비밀번호</th>
+
+                                                    <td class="tal only_pc">
+                                                        kimjenny1111@naver.com
+                                                    </td>
+
+                                                    <td class="tal only_pc">
+                                                        서울특별시 서초구
+                                                    </td>
+
+                                                    <!-- <td class="tal">
+                                                        제니아파트
+                                                    </td> -->
+
+                                                    <td class="tal">
+                                                        2022-08-15
+                                                    </td>	
+
                                                     <td>
-                                                        <input type="text" id="pass_word" name="pass_word" value="" disabled="disabled">
+                                                        <button type=button id="modal_btn" >열기</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
 
-                                        <div style="margin: 2rem 0 0;display: flex;">
-                                            <a href="/inquiry.html" class="btn btn-outline-primary" style="margin-left: auto;">신청내역 확인</a>
+                                    <!-- 자격정보 입력 -->
+                                    <h6 class="content_box_tt content_box_tt2">자격정보 입력</h6>
+                                    <div class="checklist_box">
+                                        <div>
+                                            <span class="icon_comment material-symbols-outlined">comment</span>
+                                            신청하시려는 ISO 규격과 당급을 선택하세요.
                                         </div>
+                                    </div>
+                                    
+                                    <table class="apply_table">
+                                        <thead>
+                                            <tr style="display:none">
+                                                <th scope="cols"></th>
+                                                <th scope="cols"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">신청규격</th>
+                                                <td colspan='3'>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO9001"> ISO 9001:2015 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO14001"> ISO 14001:2015 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO13485"> ISO 13485:2016 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO22000"> ISO 22000:2018 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO27001"> ISO 27001:2013 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO45001"> ISO 45001:2018 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO20000"> ISO 20000-1:2018 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO22301"> ISO 22301:2019 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO27701"> ISO 27701:2019 </label>
+                                                    <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO37001"> ISO 37001:2016 </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등급</th>
+                                                <td colspan='3'>
+                                                    <label class="type_radio"><input type="radio" name="grade" value="AA"> 심사원보 </label>
+                                                    <label class="type_radio"><input type="radio" name="grade" value="A"> 심사원 </label>
+                                                    <label class="type_radio"><input type="radio" name="grade" value="LA"> 선임심사원 </label>
+                                                    <label class="type_radio"><input type="radio" name="grade" value="PA"> 검증심사원 </label>
+                                                    <label class="type_radio"><input type="radio" name="grade" value="IA"> 내부심사원 </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">유형</th>
+                                                <td colspan='3'>
+                                                    <label class="type_radio"><input type="radio" name="type" value="type_1"> 최초인증 </label>
+                                                    <label class="type_radio"><input type="radio" name="type" value="type_2"> 사후 </label>
+                                                    <label class="type_radio"><input type="radio" name="type" value="type_3"> 갱신 </label>
+                                                    <label class="type_radio"><input type="radio" name="type" value="type_4"> 규격추가 </label>
+                                                    <label class="type_radio"><input type="radio" name="type" value="type_5"> 등급변경 </label>
+                                                    <label class="type_radio"><input type="radio" name="type" value="type_6"> 전환 </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>      
 
-                                        <h6 class="content_box_tt content_box_tt2">자격정보 입력</h6>
-                                        <div class="checklist_box">
-                                            <div>
-                                                <span class="icon_comment material-symbols-outlined">comment</span>
-                                                신청하시려는 ISO 규격과 당급을 선택하세요.
-                                            </div>
-                                        </div>
-                                        
-                                        <table class="apply_table">
-                                            <thead>
-                                                <tr style="display:none">
-                                                    <th scope="cols"></th>
-                                                    <th scope="cols"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">신청규격</th>
-                                                    <td colspan='3'>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO9001"> ISO 9001:2015 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO14001"> ISO 14001:2015 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO45001"> ISO 45001:2018 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO22000"> ISO 22000:2018 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO27001"> ISO 27001:2013 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO13485"> ISO 13485:2016 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO20000"> ISO 20000-1:2018 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO22301"> ISO 22301:2019 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO21001"> ISO 21001:2018 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO37001"> ISO 37001:2016 </label>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO22716"> ISO 22716:20007 </label>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">등급</th>
-                                                    <td colspan='3'>
-                                                        <label class="type_radio"><input type="radio" name="grade" value="AA"> 심사원보 </label>
-                                                        <label class="type_radio"><input type="radio" name="grade" value="A"> 심사원 </label>
-                                                        <label class="type_radio"><input type="radio" name="grade" value="LA"> 선임심사원 </label>
-                                                        <label class="type_radio"><input type="radio" name="grade" value="PA"> 검증심사원 </label>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">유형</th>
-                                                    <td colspan='3'>
-                                                        <label class="type_radio"><input type="radio" name="type" value="type_1"> 최초인증 </label>
-                                                        <label class="type_radio"><input type="radio" name="type" value="type_2"> 사후 </label>
-                                                        <label class="type_radio"><input type="radio" name="type" value="type_3"> 갱신 </label>
-                                                        <label class="type_radio"><input type="radio" name="type" value="type_4"> 규격추가 </label>
-                                                        <label class="type_radio"><input type="radio" name="type" value="type_5"> 등급변경 </label>
-                                                        <label class="type_radio"><input type="radio" name="type" value="type_6"> 전환 </label>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>      
-
-                                        <div style="text-align:center;margin-top:30px">
-                                            <a href="javascript:history.back()" class="btn back_btn">돌아가기</a>
-                                            <a href="../apply/form_2page.html" id="submitAction" class="btn sub_btn">확인</a>
-                                        </div>
-                                    </form> 
-                                </div>
+                                    <div style="text-align:center;margin-top:30px">
+                                        <a href="javascript:history.back()" class="btn back_btn">돌아가기</a>
+                                        <a href="../apply/apply.html" id="submitAction" class="btn sub_btn">확인</a>
+                                    </div>
+                                </form> 
                             </div>
+                            <!-- END : form wrap  -->
                         </div>
                     </div>
                 </div>
@@ -219,7 +281,7 @@
                 timeout : 1000,
                 error : function( xhr, ajaxOptions, thrownError ) {
                     // alert( "재확인 후 다시 제출해주시길 바랍니다." );
-                    location.href="form_personal.html";
+                    location.href="apply.html";
                 },
                 
                 success: function(data) {
