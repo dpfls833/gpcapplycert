@@ -15,14 +15,13 @@
     <!-- Fontawesome 연결 -->
     <script src="https://kit.fontawesome.com/3fa2bab9a8.js" crossorigin="anonymous"></script>
     <!-- CSS/Javascript 파일 연결 -->
-    <link rel="stylesheet" href="/theme/css/default.css">
-    <link rel="stylesheet" href="/theme/css/design.css">
-    <link rel="stylesheet" href="/theme/css/subpage_design.css">
-    <link rel="stylesheet" href="/theme/css/responsive.css">
-    <script type="text/javascript" src="/theme/js/design.js"></script> 
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/design.css">
+    <link rel="stylesheet" href="../css/subpage_design.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script type="text/javascript" src="../js/design.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
@@ -72,32 +71,61 @@
                                 </div>
 
                                 <div id="form01">
-                                    <form name="fm_write" class="" method="post" enctype="multipart/form-data">
+                                    <div class="login_wrap">
                                         <h6 class="content_box_tt content_box_tt2">신청내역확인</h6>
                                         <table class="apply_table">
                                             <tbody>
                                                 <tr>
                                                     <th scope="row">이메일</th>
                                                     <td>
-                                                        <input type="text" id="cer_code" name="cer_code" value="" disabled="disabled">
+                                                        <input type="text" class="input_login" name="userID" id="userID" placeholder="아이디">
                                                     </td>
                                                     <th scope="row">비밀번호</th>
                                                     <td>
-                                                        <input type="text" id="pass_word" name="pass_word" value="" disabled="disabled">
+                                                        <input type="password" class="input_login" name="userPW" id="userPW" placeholder="비밀번호">
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
-
                                         <div style="margin: 2rem 0 0;display: flex;">
-                                            <a href="/inquiry.html" class="btn btn-outline-primary" style="margin-left: auto;">신청내역 확인</a>
+                                            <button id="btn_login" class="btn btn-primary confm" style="margin-left: auto;" disabled onclick='btnActive();'>신청내역 확인</button>
                                         </div>
+                                        <div id="submiT" style="margin: 0 0 100px;display: none;">
+                                            <div>
+                                                <table class="type01">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">순서</th>
+                                                            <th scope="col">이름</th>
+                                                            <th scope="col">인증번호</th>
+                                                            <th scope="col">신청규격 및 등급</th>
+                                                            <th scope="col">유형</th>
+                                                            <th scope="col">등록일</th>
+                                                            <th scope="col">상세보기</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="list_type01">
+                                                            <td>1</td>
+                                                            <td>홍길동</td>
+                                                            <td>12345678P</td>
+                                                            <td>ISO 9001:2015(심사원)</td>
+                                                            <td>최초인증</td>
+                                                            <td>2021-08-08 10:49:39</td>
+                                                            <td><a href="#" id="modal_btn">열기</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <form name="fm_write" class="" method="post" enctype="multipart/form-data">
                                         <h6 class="content_box_tt content_box_tt2">자격정보 입력</h6>
                                         <div class="checklist_box">
                                             <div>
                                                 <span class="icon_comment material-symbols-outlined">comment</span>
-                                                신청하시려는 ISO 규격과 당급을 선택하세요.
+                                                신청하시려는 ISO 규격과 등급을 선택하세요.
                                             </div>
                                         </div>
                                         
@@ -112,7 +140,7 @@
                                                 <tr>
                                                     <th scope="row">신청규격</th>
                                                     <td colspan='3'>
-                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO9001"> ISO 9001:2015 </label>
+                                                        <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO9001" checked> ISO 9001:2015 </label>
                                                         <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO14001"> ISO 14001:2015 </label>
                                                         <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO45001"> ISO 45001:2018 </label>
                                                         <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO22000"> ISO 22000:2018 </label>
@@ -128,7 +156,7 @@
                                                 <tr>
                                                     <th scope="row">등급</th>
                                                     <td colspan='3'>
-                                                        <label class="type_radio"><input type="radio" name="grade" value="AA"> 심사원보 </label>
+                                                        <label class="type_radio"><input type="radio" name="grade" value="AA" checked> 심사원보 </label>
                                                         <label class="type_radio"><input type="radio" name="grade" value="A"> 심사원 </label>
                                                         <label class="type_radio"><input type="radio" name="grade" value="LA"> 선임심사원 </label>
                                                         <label class="type_radio"><input type="radio" name="grade" value="PA"> 검증심사원 </label>
@@ -137,7 +165,7 @@
                                                 <tr>
                                                     <th scope="row">유형</th>
                                                     <td colspan='3'>
-                                                        <label class="type_radio"><input type="radio" name="type" value="type_1"> 최초인증 </label>
+                                                        <label class="type_radio"><input type="radio" name="type" value="type_1" checked> 최초인증 </label>
                                                         <label class="type_radio"><input type="radio" name="type" value="type_2"> 사후 </label>
                                                         <label class="type_radio"><input type="radio" name="type" value="type_3"> 갱신 </label>
                                                         <label class="type_radio"><input type="radio" name="type" value="type_4"> 규격추가 </label>
@@ -152,7 +180,7 @@
                                             <a href="javascript:history.back()" class="btn back_btn">돌아가기</a>
                                             <a href="../apply/form_2page.html" id="submitAction" class="btn sub_btn">확인</a>
                                         </div>
-                                    </form> 
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -237,6 +265,45 @@
             });
             
         });
+    </script>
+
+    <script>
+        // const 선언
+        const idInput = document.getElementById('userID');
+        const pwInput = document.getElementById('userPW');
+        const loginInput = document.getElementsByClassName('login_wrap')[0];
+        const loginBtn = document.getElementById('btn_login');
+        const linkToMain = document.getElementsByClassName('confm')[0];
+
+        // 아이디 validation '@' 포함
+        function idCheck() {
+            var hasAt = idInput.value.indexOf('@');
+            return hasAt !== -1 ? true : false;
+        }
+
+        // 비밀번호 validation 5글자 이상
+        function pwCheck() {
+            return pwInput.value.length >= 5 ? true : false;
+        }
+
+        // 로그인 버튼 keyup 이벤트
+        loginInput.addEventListener('keyup', function(event) {
+            const completedInput = (idCheck() && pwCheck());
+            loginBtn.disabled = completedInput ? false : true;
+            
+        })
+
+        document.addEventListener('keyup', function(event) {
+            if (event.keyCode === 13) {
+                loginBtn.click();
+            }
+        })
+
+        function btnActive()  {
+
+        const subMt = document.getElementById('submiT');
+        subMt.style.display = 'block';
+        }
     </script>
 </body>
 </html>
