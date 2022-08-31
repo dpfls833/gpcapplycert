@@ -33,10 +33,17 @@
                     <div class="row">
                         <nav class="col-md-12">
                             <ul class="breadcrumb">
-                                <li><a href="#">Home</a></li>
-                                <li>자격 등록신청</li>
-                            </ul>
-                            <h1>자격 등록신청</h1>
+                                <li>
+                                    <a href="/index.html">홈</a>
+                                </li>
+                                <li>
+                                    <a href="#">심사원 시험</a>
+                                </li>
+                                <li>
+                                    <a href="#">심사원 등록 신청</a>
+                                </li>
+                            </ul> 
+                            <h1 class="coursename">심사원 등록 신청</h1> 
                         </nav>
                     </div>
                 </div>
@@ -70,54 +77,62 @@
                                         </li>
                                     </ul>
                                 </div>
-                                
-                                <div id="form01">
-                                    <div class="login_wrap">
-                                        <h6 class="content_box_tt content_box_tt2">신청내역확인</h6>
-                                        <table class="apply_table">
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">이메일</th>
-                                                    <td>
-                                                        <input type="text" class="input_login" name="userID" id="userID" placeholder="아이디">
-                                                    </td>
-                                                    <th scope="row">비밀번호</th>
-                                                    <td>
-                                                        <input type="password" class="input_login" name="userPW" id="userPW" placeholder="비밀번호">
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div style="margin: 2rem 0 0;display: flex;">
-                                            <button id="btn_login" class="btn btn-primary confm" style="margin-left: auto;" disabled onclick='btnActive();'>신청내역 확인</button>
-                                        </div>
-                                        <div id="submiT" style="margin: 0 0 100px;display: none;">
-                                            <div>
-                                                <table class="apply_table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">순서</th>
-                                                            <th scope="col">이름</th>
-                                                            <th scope="col">인증번호</th>
-                                                            <th scope="col">신청규격 및 등급</th>
-                                                            <th scope="col">유형</th>
-                                                            <th scope="col">등록일</th>
-                                                            <th scope="col">상세보기</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="list_type01">
-                                                            <td>1</td>
-                                                            <td>홍길동</td>
-                                                            <td>12345678P</td>
-                                                            <td>ISO 9001:2015(심사원)</td>
-                                                            <td>최초인증</td>
-                                                            <td>2021-08-08 10:49:39</td>
-                                                            <td><a href="#" id="modal_btn">열기</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+
+                                <div class="login_wrap">
+                                    <!-- 신청내역 확인 -->
+                                    <h6 class="content_box_tt content_box_tt2">신청내역 확인</h6>
+                                    <table class="apply_table">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">아이디(E-mail)</th>
+                                                <td>
+                                                    <input type="text" class="input_login" name="userID" id="userID" placeholder="아이디">
+                                                </td>
+                                                <th scope="row">비밀번호</th>
+                                                <td>
+                                                    <input type="password" class="input_login" name="userPW" id="userPW" placeholder="비밀번호">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div style="margin: 2rem 0 0;display: flex;">
+                                        <button id="btn_login" class="btn btn-primary confm" style="margin-left: auto;" disabled onclick='btnActive();'>신청내역 확인</button>
+                                    </div>
+                                    <div id="submiT" style="margin: 0 0 100px;display:none;">
+                                        <div>
+                                            <table class="apply_table apply_table_horizon">
+                                                <colgroup>
+                                                    <col style="width:5%"> <!-- 순서 -->
+                                                    <col style="width:10%"> <!-- 이름 -->
+                                                    <col style="width:15%"> <!-- 인증번호 -->
+                                                    <col style="width:20%" class="only_pc"> <!-- 신청규격 및 등급 -->
+                                                    <col style="width:10%" class="only_pc"> <!-- 유형 -->
+                                                    <col style="width:20%"> <!-- 등록일 -->
+                                                    <col style="width:10%"> <!-- 상세보기 -->
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">순서</th>
+                                                        <th scope="col">이름</th>
+                                                        <th scope="col">인증번호</th>
+                                                        <th scope="col">신청규격 및 등급</th>
+                                                        <th scope="col">유형</th>
+                                                        <th scope="col">등록일</th>
+                                                        <th scope="col">상세보기</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="list_type01">
+                                                        <td>1</td>
+                                                        <td>홍길동</td>
+                                                        <td>12345678P</td>
+                                                        <td>ISO 9001:2015(심사원)</td>
+                                                        <td>최초인증</td>
+                                                        <td>2021-08-08 10:49:39</td>
+                                                        <td><a href="#" id="modal_btn">열기</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -126,11 +141,9 @@
 
                                     <!-- 자격정보 입력 -->
                                     <h6 class="content_box_tt content_box_tt2">자격정보 입력</h6>
-                                    <div class="checklist_box">
-                                        <div>
-                                            <span class="icon_comment material-symbols-outlined">comment</span>
-                                            신청하시려는 ISO 규격과 등급을 선택하세요.
-                                        </div>
+                                    <div class="text_box_gray">
+                                        <span class="icon_comment material-symbols-outlined">comment</span>
+                                        신청하시려는 ISO 규격과 등급을 선택하세요.
                                     </div>
                                     
                                     <table class="apply_table">

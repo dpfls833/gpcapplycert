@@ -546,7 +546,7 @@ h6.content_box_tt{ /* 컨텐츠 내 작은 타이틀 */
     font-weight:600;
     color:#333;
     margin-top:50px;
-    margin-bottom:1.5rem;
+    margin-bottom:30px;
 }
 h6.content_box_tt:before{ /* 컨텐츠 내 작은 타이틀 옆 세로 보더 */
     content: "";
@@ -557,23 +557,24 @@ h6.content_box_tt:before{ /* 컨텐츠 내 작은 타이틀 옆 세로 보더 */
     margin-right: 8px;
     vertical-align: middle;
 }
-/* checklist_box */
-.checklist_box{  /* 상단 제출서류 안내 박스 */
+/* text_box_gray */
+.text_box_gray{  /* 상단 안내 메세지 박스 */
     height:auto;
     padding:20px 25px;
     background:#f9f9f9;
+    margin-bottom:30px;
 }
-.checklist_box ul{ padding-left:0px; }
-.checklist_box ul li{
+.text_box_gray ul{ padding-left:0px; }
+.text_box_gray ul li{
     list-style: none;
     padding-bottom:10px;
 }
-.checklist_box ul li a{
+.text_box_gray ul li a{
     display: inline-block;
     color:#df452a;
     text-decoration: none;
 }
-.checklist_box ul li:last-child{ padding-bottom:0px; }
+.text_box_gray ul li:last-child{ padding-bottom:0px; }
 .icon_comment{
     font-size:1.3rem !important;
     margin-right:2px;
@@ -588,7 +589,6 @@ table{ font-size:inherit; }
     text-align: justify;
     line-height: 1.5;
     margin: 0 auto;
-    margin-top:30px;
 }
 .apply_table thead tr { width: 100%; }
 .apply_table thead th {
