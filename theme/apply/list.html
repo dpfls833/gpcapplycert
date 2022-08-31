@@ -46,28 +46,17 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="tt_wh">
-                                <h2 class="point_col">신청 진행상황 조회</h2>
-                                <p class="tt_line"></p>
-                            </div>
-                            <div class="text-box bg" style="margin: 0 0 2rem;">
-                                <span>자격 등록신청시 안내 받으신 인증번호를 입력하여 주세요.</span>
-                            </div>
-                            <div id="form01">
-                                <table class="type01">
-                                    <tbody>
-                                        <tr height="35">
-                                            <th scope="row">인증번호</th>
-                                            <td>
-                                                <input type="text" name="sCode" id="sCode" class="lance" style="width: 50%;border: 1px solid #bbb;">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <button disabled="true" id="TestBtn" class="btn btn-success" style="display: table;margin: 0 auto 100px;" onclick='btnActive();'>확인</button>
-                            <div id="submiT" style="margin: 0 0 100px;display: none;">
-                                <p class="con_tt">조회 결과</p>
+                            <!-- STRAT : form wrap -->
+                            <div class="form_wrap">
+                                <div class="content_tt" style="color:#27323a;">
+                                    신청 진행상황 조회
+                                </div>
+                                <!-- 신청내역 안내 -->
+                                <h6 class="content_box_tt content_box_tt2">신청 진행상황 조회</h6>
+                                <div class="text_box_gray">
+                                    <span class="icon_comment material-symbols-outlined">comment</span>
+                                    자격 등록신청시 안내 받으신 인증번호를 입력하여 주세요.
+                                </div>
                                 <div id="form01">
                                     <table class="list">
                                         <thead>
@@ -100,6 +89,7 @@
                                     </table>
                                 </div>
                             </div>
+                            <!-- END : form wrap  -->
                         </div>
                     </div>
                 </div>
