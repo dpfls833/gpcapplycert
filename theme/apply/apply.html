@@ -20,9 +20,12 @@
     <link rel="stylesheet" href="../css/subpage_design.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <script type="text/javascript" src="../js/design.js"></script> 
+    <script type="text/javascript" src="../js/apply.js"></script> 
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- 우편번호 스크립트 -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> 
 </head>
 <body>
     <header w3-include-html="header.html"></header>
@@ -143,7 +146,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">수령 주소</th>
+                                                <th scope="row" class="required">수령 주소</th>
                                                 <td colspan='3'>
                                                     <input type="text" id="zipcode" name="zipcode" value="우편번호"> &nbsp;&nbsp;<button type="button" onclick="kakaopost()" id="btn_zip">우편번호확인</button> <br> 
                                                     <input type="text" id="address1" name="address1" value="주소"> <br>
@@ -151,53 +154,56 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">제출문서</th>
+                                                <th scope="row" class="required">제출문서</th>
                                                 <td colspan="3">
                                                     <table class="in_table">
-                                                        <tbody>
+                                                        <colgroup>
+                                                            <col style="width:30%"> <!-- 구분 -->
+                                                            <col style="width:50%"> <!-- 비고 -->
+                                                            <col style="width:20%"> <!-- 다운로드 -->
+                                                        </colgroup>
+                                                        <tbody style="border-top: 1px solid #ddd;">
                                                             <tr>
-                                                                <td colspan='2' style="color:#e53e53">ISO 9001:2015(심사원)</td>
+                                                                <td colspan='3' style="font-weight:600;">ISO 9001:2015(심사원)</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="bd_right">이력서</td>
-                                                                <td>
+                                                                <td class="bd_right">
                                                                     <label><input type="checkbox" name="document_chk" id="chk1" value="실무경력포함" checked> 실무경력포함</label>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="btn_download">
+                                                                        <a href="#" download>다운로드 <i class="fa-solid fa-download"></i></a>
+                                                                    </div>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="bd_right">심사일지</td>
-                                                                <td>
+                                                                <td class="bd_right">
                                                                     <label><input type="checkbox" name="document_chk" id="chk2" value="심사원 5맨데이, 선임 8맨데이" checked> 심사원 5맨데이, 선임 8맨데이</label>
                                                                 </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="bd_right">서약서</td>
                                                                 <td>
-                                                                    <label><input type="checkbox" name="document_chk" id="chk3" value="서약서"> 서약서</label>
+                                                                    <div class="btn_download">
+                                                                        <a href="#" download>다운로드 <i class="fa-solid fa-download"></i></a>
+                                                                    </div>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="bd_right">교육훈련수료증</td>
-                                                                <td>
+                                                                <td class="bd_right">
                                                                     <label><input type="checkbox" name="document_chk" id="chk4" value="교육수료"> 교육수료</label>
+                                                                </td>
+                                                                <td>
+
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="bd_right">학력증명서</td>
-                                                                <td>
+                                                                <td class="bd_right">
                                                                     <label><input type="checkbox" name="document_chk" id="chk5" value="고등학교졸업이상"> 고등학교졸업이상</label>
                                                                 </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="bd_right">비용</td>
                                                                 <td>
-                                                                    <label><input type="checkbox" name="document_chk" id="chk6" value="신청서, 연회비"> 신청서, 연회비</label>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="bd_right">규격 별 시험</td>
-                                                                <td>
-                                                                    <label><input type="checkbox" nname="document_chk" id="chk7" value="ISO19011+신청규격"> ISO19011+신청규격</label>
+                                                                    
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -211,25 +217,25 @@
                                             <tr>
                                                 <th scope="row">비용</th>
                                                 <td colspan="3">
-                                                    <strong style="font-weight: 600;">110,000원 (<span style="color: #e63946;">부가세포함</span>)</strong>
+                                                    <strong style="font-weight: 600;">110,000원 (<span>부가세포함</span>)</strong>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">결제수단</th>
                                                 <td colspan="3">
-                                                    <strong style="font-weight: 600;">무통장입금 (국민은행 873237-04-001683 예금주: (주)아이지씨인증원)</strong>
+                                                    <strong style="font-weight: 600;">무통장입금 (국민은행 873237-04-001683 &nbsp;예금주 : (주)아이지씨인증원)</strong>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">영수증 발급</th>
+                                                <th scope="row">현금영수증</th>
                                                 <td colspan="3">
                                                     <ul class="chk_recpt">
                                                         <li>
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input" id="customCheck5"><label class="custom-control-label" for="customCheck5">현금영수증</label>
-                                                            </div>
+                                                            <label class="type_radio"><input type="radio" name="recipt" value="1"> 소득공제용 </label>
+                                                            <label class="type_radio"><input type="radio" name="recipt" value="2"> 지출증빙용 </label>
+                                                            <label class="type_radio"><input type="radio" name="recipt" value="none"> 미발행 </label>
                                                         </li>
-                                                        <input type="text" placeholder="발행 연락처" class="custom-control-input-text" style="width: 50%;border: 1px solid #bbb;" disabled="disabled">
+                                                        <input type="text" placeholder="발행 연락처" class="custom-control-input-text" style="margin-top:5px;">
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -244,14 +250,39 @@
                                         </tbody>
                                     </table>
                                     <div>
-                                        <p class="content_box_tt content_box_tt2">자격인증 프로세스</p>
+                                        <h6 class="content_box_tt content_box_tt2">자격인증 프로세스</h6>
+                                        <div class="cert_process_box">
+                                            <ul>
+                                                <li>
+                                                    신청서류 접수<span>(신청비 납부)</span>
+                                                    <span class="arrow-next"></span>
+                                                </li>
+                                                <li>
+                                                    제출서류 검토<span>(검토후 보완요청)</span>
+                                                    <span class="arrow-next"></span>
+                                                </li>
+                                                <li>
+                                                    인증심의<span>(검토후 보완요청)</span>
+                                                    <span class="arrow-next"></span>
+                                                </li>
+                                                <li>
+                                                    인증승인<span>&nbsp;</span>
+                                                    <span class="arrow-next"></span>
+                                                </li>
+                                                <li>
+                                                    연회비 납부<span>(인증서/카드 신청)</span>
+                                                    <span class="arrow-next"></span>
+                                                </li>
+                                                <li>
+                                                    수령처로 발송<span>&nbsp;</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div>
-                                        <p class="con_tt">개인정보 이용약관</p>
-                                    </div>
-                                    <div class="c-tit-box" style="position: relative;margin-top: 3rem;padding: 2rem 0;font-size: 0;">
-                                        <h3 class="c-tit" style="font-weight: 500;display: inline-block;font-size: 2rem;color: #000;">GPC 온라인 자격 등록신청 이용약관</h3>
-                                        <span class="c-txt" style="display: inline-block;margin: 0 0 0 1rem;color: #7b7b7b;font-size: 1.6rem;">서비스 이용을 위해 아래 이용약관 및 개인정보 수집에 동의해 주세요.</span>
+                                        <h6 class="content_box_tt content_box_tt2">
+                                            개인정보 이용약관<span class="c-txt" style="display: inline-block;margin: 0 0 0 1rem;color: #7b7b7b;font-size: 1rem;">서비스 이용을 위해 아래 이용약관 및 개인정보 수집에 동의해 주세요.</span>
+                                        </h6>
                                     </div>
 
                                     <div class="acc-lst" style="border-top: 1px solid #000;">
@@ -790,6 +821,5 @@
         });
         
     </script>
-    
 </body>
 </html>

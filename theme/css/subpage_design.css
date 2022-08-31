@@ -703,8 +703,8 @@ button{ cursor:pointer; } /* 버튼 */
 }
 .btn:hover{ background:#0370e1;color:#fff; }
 button#btn_zip{ /* 우편번호확인 버튼 */
-    background:#13bd6e;
-    border:1px solid #13bd6e;
+    background:#aaa;
+    border:1px solid #aaa;
     color:#fff;
     padding:4px 8px;
     font-size: 0.75rem;
@@ -730,7 +730,7 @@ a#submitAction{ /* 신청하기 버튼 */
     transition:all 0.1s;
 }
 button#submitAction:hover{ background:#0370e1;}
-.btn_return a{
+.btn_return a{ /* 이전으로 버튼 */
     display: block;
     width:130px;
     height:46px;
@@ -742,7 +742,25 @@ button#submitAction:hover{ background:#0370e1;}
     text-decoration: none;
 }
 .btn_return a:hover{ color:#fff; }
-
+.btn_download{ /* 다운로드 버튼 */
+    display: block;
+    margin:0 auto;
+    display: table;
+    width:auto;
+    height:auto;
+    background:#13bd6e;
+    color:#fff;
+    transition:all 0.1s;
+}
+.btn_download a{
+    display: inline-block;
+    padding: 4px 12px;
+    font-size:0.9rem;
+}
+.btn_download a:hover{ 
+    background:#20ad6b;
+    color:#fff;
+}
  /*  cert_process  */
  .cert_process{ margin:30px 0; }
  .cert_process_tt{ font-weight:500; }
@@ -763,6 +781,7 @@ button#submitAction:hover{ background:#0370e1;}
     text-align:center;
     font-weight:500;
     padding:22px 10px;
+    line-height: 1.5;
 
  }
  .cert_process_box ul li span{
