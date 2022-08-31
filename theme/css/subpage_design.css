@@ -303,12 +303,10 @@ label.required::after {
     line-height: 1.6;
     text-align: left;
 }
-
-
 .required::after {
     margin-left: 4px;
-    color: #0086ff;
-    content: "(필수)";
+    color: #e63946;
+    content: "*";
 }
 
 
@@ -450,7 +448,7 @@ html{font-size:15px;}
 body {
     margin:0;
     background-color: #fff;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Noto Sans KR',sans-serif;
     color: #4c4c4c;
     font-weight: 300;
     font-size: 1rem;
@@ -491,7 +489,6 @@ body {
 .step_navi ul{ 
     width:100%; 
     display: flex;
-
 }
 .step_navi ul li{
     justify-content: space-between;
@@ -548,6 +545,7 @@ h6.content_box_tt{ /* 컨텐츠 내 작은 타이틀 */
     font-size:1.3rem;
     font-weight:600;
     color:#333;
+    margin-top:50px;
     margin-bottom:1.5rem;
 }
 h6.content_box_tt:before{ /* 컨텐츠 내 작은 타이틀 옆 세로 보더 */
@@ -555,12 +553,9 @@ h6.content_box_tt:before{ /* 컨텐츠 내 작은 타이틀 옆 세로 보더 */
     display: inline-block;
     width: 3px;
     height: 20px;
-    background: #F29600;
+    background: #e63946;
     margin-right: 8px;
     vertical-align: middle;
-}
-h6.content_box_tt2{ /* 등록정보 페이지 내 작은 타이틀 */
-    margin-top:50px;
 }
 /* checklist_box */
 .checklist_box{  /* 상단 제출서류 안내 박스 */
@@ -580,7 +575,7 @@ h6.content_box_tt2{ /* 등록정보 페이지 내 작은 타이틀 */
 }
 .checklist_box ul li:last-child{ padding-bottom:0px; }
 .icon_comment{
-    font-size:1.3rem;
+    font-size:1.3rem !important;
     margin-right:2px;
     vertical-align: middle;
 }
@@ -603,7 +598,7 @@ table{ font-size:inherit; }
     border-bottom: 1px solid #666;
     background: #f7f7f7;
 }
-.apply_table>tbody{ border-top: 1px solid #27323a; }
+.apply_table>tbody{ border-top: 1px solid #666666; }
 .apply_table tbody th {
     text-align: left;
     width: 15%;
@@ -637,7 +632,7 @@ table{ font-size:inherit; }
 .in_table .bd_right{border-right:1px solid #ddd;}
  /*  등록정보조회 페이지 수평정렬 테이블  */
 .apply_table_horizon { text-align: center; }
-.apply_table_horizon thead{ border-top: 1px solid #27323a; }
+.apply_table_horizon thead{ border-top: 1px solid #666666; }
 .apply_table_horizon thead th { 
     text-align:center;
     padding: 12px 10px; 
@@ -682,7 +677,6 @@ button{ cursor:pointer; } /* 버튼 */
     border:none;
     color:#fff; */
     display: inline-block;;
-    width:160px;
     margin-top:15px;
     background: #fff;
     border: 1px solid #bbb;
@@ -695,7 +689,7 @@ button{ cursor:pointer; } /* 버튼 */
 }
 .apply_chk2{ text-align:center; } /* 신청번호 확인 버튼 */
 .apply_chk_btn_2{ width:60px; }
-a.btn{ /* 신청하기 버튼 */
+.btn{ /* 신청하기 버튼 */
     background:#0982ff;
     border:none;
     color:#fff;
@@ -706,7 +700,7 @@ a.btn{ /* 신청하기 버튼 */
     transition:all 0.1s;
     line-height:1.5;
 }
-a.btn:hover{ background:#0370e1;color:#fff; }
+.btn:hover{ background:#0370e1;color:#fff; }
 button#btn_zip{ /* 우편번호확인 버튼 */
     background:#13bd6e;
     border:1px solid #13bd6e;
