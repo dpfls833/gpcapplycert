@@ -71,94 +71,65 @@
                                     </ul>
                                 </div>
                                 
-                                <form name="fm_write" class="" method="post" enctype="multipart/form-data">
-                                    <!-- 신청내역확인 -->
-                                    <h6 class="content_box_tt">신청내역확인</h6>
-                                    <table class="apply_table">
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">아이디(E-mail)</th>
-                                                <td>
-                                                    <input type="text" id="cer_code" name="cer_code" value="">
-                                                </td>
-                                                <th scope="row">비밀번호</th>
-                                                <td>
-                                                    <input type="text" id="pass_word" name="pass_word" value="">
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="apply_chk" style="margin: 2rem 0 0;display: flex;">
-                                        <button class="apply_chk_btn" onclick="onDisplay()" style="margin-left: auto;">신청내역확인</a>
-                                    </div>
-                                    <div class="apply_info" style="display:none;"> 
-                                        <table class="apply_table apply_table_horizon">
-                                            <colgroup>
-                                                <col style="width:3%"> <!-- 체크박스 -->
-                                                <col style="width:3%"> <!-- 순서 -->
-                                                <col style="width:9%"> <!-- 이름(영문) -->
-                                                <col style="width:10%"> <!-- 전화번호 -->
-                                                <col style="width:15%" class="only_pc"> <!-- E-Mail -->
-                                                <col style="width:15%" class="only_pc"> <!-- 주소 -->
-                                                <col style="width:10%"> <!-- 등록일 -->
-                                                <col style="width:10%"> <!-- 상세보기 -->
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col"></th>
-                                                    <th scope="col">순서</th>
-                                                    <th scope="col">이름</th>
-                                                    <th scope="col">전화번호</th>
-                                                    <th scope="col" class="only_pc">E-mail</th>
-                                                    <th scope="col" class="only_pc">주소</th>
-                                                    <!-- <th scope="col">상세주소</th> -->
-                                                    <th scope="col">등록일</th>		
-                                                    <th scope="col">상세보기</th>
-                                                </tr>
-                                            </thead>
+                                <div id="form01">
+                                    <div class="login_wrap">
+                                        <h6 class="content_box_tt content_box_tt2">신청내역확인</h6>
+                                        <table class="apply_table">
                                             <tbody>
-                                                <tr> <!-- 1번째 줄 -->
-                                                    <td>								
-                                                        <input type="checkbox" name="chk_wr_id[]" value="" >
-                                                    </td> 
-                                                    <td>3</td>
-
-                                                    <td>김제니</td>
-
+                                                <tr>
+                                                    <th scope="row">이메일</th>
                                                     <td>
-                                                        010-2222-3333
+                                                        <input type="text" class="input_login" name="userID" id="userID" placeholder="아이디">
                                                     </td>
-
-                                                    <td class="tal only_pc">
-                                                        kimjenny1111@naver.com
-                                                    </td>
-
-                                                    <td class="tal only_pc">
-                                                        서울특별시 서초구
-                                                    </td>
-
-                                                    <!-- <td class="tal">
-                                                        제니아파트
-                                                    </td> -->
-
-                                                    <td class="tal">
-                                                        2022-08-15
-                                                    </td>	
-
+                                                    <th scope="row">비밀번호</th>
                                                     <td>
-                                                        <button type=button id="modal_btn" >열기</button>
+                                                        <input type="password" class="input_login" name="userPW" id="userPW" placeholder="비밀번호">
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <div style="margin: 2rem 0 0;display: flex;">
+                                            <button id="btn_login" class="btn btn-primary confm" style="margin-left: auto;" disabled onclick='btnActive();'>신청내역 확인</button>
+                                        </div>
+                                        <div id="submiT" style="margin: 0 0 100px;display: none;">
+                                            <div>
+                                                <table class="apply_table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">순서</th>
+                                                            <th scope="col">이름</th>
+                                                            <th scope="col">인증번호</th>
+                                                            <th scope="col">신청규격 및 등급</th>
+                                                            <th scope="col">유형</th>
+                                                            <th scope="col">등록일</th>
+                                                            <th scope="col">상세보기</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="list_type01">
+                                                            <td>1</td>
+                                                            <td>홍길동</td>
+                                                            <td>12345678P</td>
+                                                            <td>ISO 9001:2015(심사원)</td>
+                                                            <td>최초인증</td>
+                                                            <td>2021-08-08 10:49:39</td>
+                                                            <td><a href="#" id="modal_btn">열기</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+
+                                <form name="fm_write" class="" method="post" enctype="multipart/form-data">
 
                                     <!-- 자격정보 입력 -->
                                     <h6 class="content_box_tt content_box_tt2">자격정보 입력</h6>
                                     <div class="checklist_box">
                                         <div>
                                             <span class="icon_comment material-symbols-outlined">comment</span>
-                                            신청하시려는 ISO 규격과 당급을 선택하세요.
+                                            신청하시려는 ISO 규격과 등급을 선택하세요.
                                         </div>
                                     </div>
                                     
