@@ -8,7 +8,7 @@
 .breadcrumb_bg.introduce { background: url('/images/banner_02.png') }
 .breadcrumb { margin: 1rem 0; }
 .breadcrumb li {display: inline;font-size: 1rem;} /* 1.4rem 임의수정 */
-.breadcrumb li+li:before {padding: 8px;color: black;content: "\003E";}
+.breadcrumb li+li:before { padding: 8px;color: black;content: "\003E"; }
 
 
 /* Font setting */
@@ -356,7 +356,7 @@ label.required::after {
 .chk_icon {
     display: block;
     vertical-align: middle;
-    background: url(../images/ico_check_off.png);
+    background: url('../images/check-off.png');
 }
 .chkBox .chk_icon {
     position: absolute;
@@ -368,10 +368,10 @@ label.required::after {
     background-position: 50% 50%;
 }
 .chkBox input[type=checkbox]:checked + .chk_icon {
-    background: url(../images/icon_check_on.png);
+    background: url('../images/check-on.png');
 }
 .acc-lst .acc-item.on .tit-box .btn-acc:before {
-    background: url(../images/btn_accordion_arr_up.png) no-repeat 0 0;
+    background: url('../images/arrow-up.png') no-repeat 0 0;
 }
 .label {
     position: absolute;
@@ -421,10 +421,10 @@ label.required::after {
     left: 50%;
     width: 18px;
     height: 18px;
-    background: url(../images/btn_accordion_arr_down.png) no-repeat;
+    background: url('../images/arrow-down.png') no-repeat;
 }
-.btn-acc.serVice.up::before { background: url(../images/btn_accordion_arr_up.png) no-repeat; }
-.btn-acc.poliCy.up::before { background: url(../images/btn_accordion_arr_up.png) no-repeat; }
+.btn-acc.serVice.up::before { background: url('../images/arrow-up.png') no-repeat; }
+.btn-acc.poliCy.up::before { background: url('../images/arrow-down.png') no-repeat; }
 .acc-layer {
     display: block;
     background-color: #f7f7f7;

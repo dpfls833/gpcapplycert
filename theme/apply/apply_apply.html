@@ -22,7 +22,6 @@
     <script type="text/javascript" src="../js/design.js"></script> 
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
@@ -286,7 +285,7 @@
                 
                 success: function(data) {
                     console.log(data);
-                    location.href="form.php";
+                    location.href="apply_apply.php";
                     //if( data.code == "OK" ) {
                         //alert( data.msg );
                         //document.location.reload();
@@ -299,6 +298,44 @@
             });
             
         });
+    </script>
+    <script>
+        // const 선언
+        const idInput = document.getElementById('userID');
+        const pwInput = document.getElementById('userPW');
+        const loginInput = document.getElementsByClassName('login_wrap')[0];
+        const loginBtn = document.getElementById('btn_login');
+        const linkToMain = document.getElementsByClassName('confm')[0];
+
+        // 아이디 validation '@' 포함
+        function idCheck() {
+            var hasAt = idInput.value.indexOf('@');
+            return hasAt !== -1 ? true : false;
+        }
+
+        // 비밀번호 validation 5글자 이상
+        function pwCheck() {
+            return pwInput.value.length >= 5 ? true : false;
+        }
+
+        // 로그인 버튼 keyup 이벤트
+        loginInput.addEventListener('keyup', function(event) {
+            const completedInput = (idCheck() && pwCheck());
+            loginBtn.disabled = completedInput ? false : true;
+            
+        })
+
+        document.addEventListener('keyup', function(event) {
+            if (event.keyCode === 13) {
+                loginBtn.click();
+            }
+        })
+
+        function btnActive()  {
+
+        const subMt = document.getElementById('submiT');
+        subMt.style.display = 'block';
+        }
     </script>
 </body>
 </html>
