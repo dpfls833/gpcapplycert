@@ -52,41 +52,58 @@
                                     신청 진행상황 조회
                                 </div>
                                 <!-- 신청내역 안내 -->
-                                <h6 class="content_box_tt content_box_tt2">신청 진행상황 조회</h6>
+                                <h6 class="content_box_tt">신청 진행상황 조회</h6>
                                 <div class="text_box_gray">
                                     <span class="icon_comment material-symbols-outlined">comment</span>
                                     자격 등록신청시 안내 받으신 인증번호를 입력하여 주세요.
                                 </div>
                                 <div id="form01">
-                                    <table class="list">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">순서</th>
-                                                <th scope="col">이름</th>
-                                                <th scope="col">인증번호</th>
-                                                <th scope="col">신청규격 및 등급</th>
-                                                <th scope="col">유형</th>
-                                                <th scope="col">등록일</th>
-                                                <th scope="col">상세보기</th>
-                                            </tr>
-                                        </thead>
+                                    <table class="type01">
                                         <tbody>
-                                            <tr class="list_type01">
-                                                <td>1</td>
-                                                <td>홍길동</td>
-                                                <td>1912201137B00</td>
-                                                <td>ISO 9001:2015(심사원)</td>
-                                                <td>최초인증</td>
-                                                <td>2021-08-08 10:49:39</td>
-                                                <td class="view_button">
-                                                    <a href="#" id="modal_btn">
-                                                        <i class="fa-regular fa-square-plus plus-btn"></i>
-                                                        <span class="btn btn-outline-primary btn-viewmore tablet_block">상세보기</span>
-                                                    </a>
+                                            <tr height="35">
+                                                <th scope="row">인증번호</th>
+                                                <td>
+                                                    <input type="text" name="sCode" id="sCode" class="lance" style="width: 50%;border: 1px solid #bbb;">
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <button disabled="true" id="TestBtn" class="btn btn-success" style="display: table;margin-left:auto;margin-right:auto;margin-bottom:100px;" onclick='btnActive();'>확인</button>
+                                </div>
+                                <div id="submiT" style="margin: 0 0 80px;display: none;">
+                                    <h6 class="content_box_tt">조회 결과</h6>
+                                    <div id="form01 ">
+                                        <table class="apply_table apply_table_horizon">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">순서</th>
+                                                    <th scope="col">이름</th>
+                                                    <th scope="col">인증번호</th>
+                                                    <th scope="col">신청규격 및 등급</th>
+                                                    <th scope="col">유형</th>
+                                                    <th scope="col">등록일</th>
+                                                    <th scope="col">상세보기</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="list_type01">
+                                                    <td>1</td>
+                                                    <td>홍길동</td>
+                                                    <td>1912201137B00</td>
+                                                    <td>ISO 9001:2015(심사원)</td>
+                                                    <td>최초인증</td>
+                                                    <td>2021-08-08 10:49:39</td>
+                                                    <td class="view_button">
+                                                        <a href="#" id="modal_btn">
+                                                            <i class="fa-regular fa-square-plus plus-btn"></i>
+                                                            <span class="btn btn-outline-primary btn-viewmore tablet_block">상세보기</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div style="text-align:center;"><a href="../apply/apply_confirm.html" class="btn back_btn"> &lt; 이전으로</a></div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- END : form wrap  -->

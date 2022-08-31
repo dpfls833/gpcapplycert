@@ -693,6 +693,7 @@ button{ cursor:pointer; } /* 버튼 */
     background:#0982ff;
     border:none;
     color:#fff;
+    margin-top:40px;
     padding:8px 20px;
     font-size: 0.9rem;
     vertical-align:top;
