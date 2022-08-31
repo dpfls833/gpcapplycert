@@ -58,71 +58,35 @@
                                     자격 등록신청시 안내 받으신 인증번호를 입력하여 주세요.
                                 </div>
                                 <div id="form01">
-                                    <table class="type01">
+                                    <table class="list">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">순서</th>
+                                                <th scope="col">이름</th>
+                                                <th scope="col">인증번호</th>
+                                                <th scope="col">신청규격 및 등급</th>
+                                                <th scope="col">유형</th>
+                                                <th scope="col">등록일</th>
+                                                <th scope="col">상세보기</th>
+                                            </tr>
+                                        </thead>
                                         <tbody>
-                                            <tr height="35">
-                                                <th scope="row">인증번호</th>
-                                                <td>
-                                                    <input type="text" name="sCode" id="sCode" class="lance" style="width: 50%;border: 1px solid #bbb;">
+                                            <tr class="list_type01">
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td>1912201137B00</td>
+                                                <td>ISO 9001:2015(심사원)</td>
+                                                <td>최초인증</td>
+                                                <td>2021-08-08 10:49:39</td>
+                                                <td class="view_button">
+                                                    <a href="#" id="modal_btn">
+                                                        <i class="fa-regular fa-square-plus plus-btn"></i>
+                                                        <span class="btn btn-outline-primary btn-viewmore tablet_block">상세보기</span>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                                <button disabled="true" id="TestBtn" class="btn btn-success" style="display: table;margin: 0 auto 100px;" onclick='btnActive();'>확인</button>
-                                <div id="submiT" style="margin: 0 0 100px;display: none;">
-                                    <p class="con_tt">조회 결과</p>
-                                    <div id="form01">
-                                        <p class="bollotBox" style="position: relative;font-weight: 600;margin-top: 2rem;padding: 0 0 0 20px;">사용자 정보</p>
-                                        <table class="type01">
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">이름</th>
-                                                    <td>홍길동(hongkildong)</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">연락처</th>
-                                                    <td>010-123-4567</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">이메일</th>
-                                                    <td>test1@gmail.com</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">주소</th>
-                                                    <td>서울시 강남구 역삼동</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p class="bollotBox" style="position: relative;font-weight: 600;margin-top: 2rem;padding: 0 0 0 20px;">신청 내역</p>
-                                        <table class="type01">
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">자격구분</th>
-                                                    <td>ISO 심사원자격</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">신청유형</th>
-                                                    <td>최초인증</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">신청규격</th>
-                                                    <td>ISO 9001:2015</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">등급</th>
-                                                    <td>심사원보</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">범위</th>
-                                                    <td style="text-align: justify;">
-                                                        음식료 및 담배, 섬유 및 섬유제품, 가죽 및 가죽제품, 펄프ㆍ종이 및 종이제품, 출판업, 인쇄업, 코크스 제소 및 석유 정제품, 핵연료, 화학약품, 화학제품, 의약품, 고무 및 플라스틱제품, 비금속광물제품, 콘크리트, 시멘트, 석회, 석고 등, 기초금속 및 조립금속제품, 기계 및 장비, 전기및 광학기기, 선박, 항공기타 수송장비, 기타 제조업, 재생, 전기공급, 가스공급, 수도공급, 건설, 도ㆍ소매업.자동차ㆍ오토바이 수리, 개인 및 가정용품 수리, 숙박 및 음식점, 운수, 창고, 통신, 금융 및 보험, 부동산, 임대, 정보기술, 엔지니어링 서비스, 기타서비스, 공공행정, 교육, 보건 및 사회복지, 기타 사회서비스
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="btn_return"><a href="../apply/apply_confirm.html"> &lt; 이전으로</a></div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- END : form wrap  -->
