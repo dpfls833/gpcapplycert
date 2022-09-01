@@ -419,7 +419,7 @@ label.required::after {
 .txt-comp {
     font-weight: 500;
     color: #0086ff;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .btn-acc {
@@ -679,7 +679,6 @@ select{ /* 전체 텍스트 입력란, select 선택란 */
     border-radius:0px;
     border:1px solid #bbb;
     color:#555;
-    background:#fff;
 }
 label.type_checkbox{ 
     width:24.6%; 
