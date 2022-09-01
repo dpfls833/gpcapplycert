@@ -570,7 +570,7 @@ h6.content_box_tt{ /* 컨텐츠 내 작은 타이틀 */
     font-size:1.3rem;
     font-weight:600;
     color:#333;
-    margin-top:50px;
+    margin-top:60px;
     margin-bottom:30px;
 }
 h6.content_box_tt:before{ /* 컨텐츠 내 작은 타이틀 옆 세로 보더 */
@@ -792,7 +792,7 @@ button#submitAction:hover{ background:#0370e1;}
  .cert_process_box{
     width:100%;
     height:auto;
-    margin-top:15px;
+    margin-bottom:80px;
     font-size:0.9rem;
  }
  .cert_process_box ul li{
