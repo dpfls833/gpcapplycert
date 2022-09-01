@@ -4,11 +4,26 @@
 
 
 /* Breadcrumb Pagination */
-.breadcrumb_bg { background: url('/images/banner.png') no-repeat;background-size: cover;background-position: center; }
-.breadcrumb_bg.introduce { background: url('/images/banner_02.png') }
-.breadcrumb { margin: 1rem 0; }
-.breadcrumb li {display: inline;font-size: 1rem;} /* 1.4rem 임의수정 */
-.breadcrumb li+li:before { padding: 8px;color: black;content: "\003E"; }
+.breadcrumb_bg {
+    background: url('/images/banner.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.breadcrumb_bg.introduce {
+    background: url('/images/banner_02.png');
+}
+.breadcrumb { 
+    margin: 1rem 0;
+}
+.breadcrumb li {
+    display: inline;
+    font-size: 1rem; /* 1.4rem 임의수정 */
+}
+.breadcrumb li+li:before { 
+    padding: 8px;
+    color: black;
+    content: "\003E";
+}
 
 
 /* Font setting */
@@ -17,7 +32,9 @@
     font-weight: 600;
     margin: 6rem 0 2rem 0;
 }
-.page_tt { margin: 0 0 2rem 0; }
+.page_tt { 
+    margin: 0 0 2rem 0;
+}
 .con_tt {
     position: relative;
     left: 10px;
@@ -169,6 +186,14 @@ table.respncv_none td { border:1px solid #ddd; }
 
 .bollotBox::before { display: block;content: ' \2610'; }
 
+.c-txt {
+    display: inline-block;
+    margin: 0 0 0 1rem;
+    color: #7b7b7b;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
 
 /* 상세보기 버튼 */
 .black_bg{
@@ -312,7 +337,7 @@ label.required::after {
 
 
 
-
+/* 개인정보 이용약관 영역 CSS */
 .tit-box {
     display: block;
     position: relative;
@@ -323,7 +348,7 @@ label.required::after {
     border-radius: 0;
     border: 0;
     background-color: transparent;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: bold;
     text-align: left;
 }
@@ -387,14 +412,14 @@ label.required::after {
     left: 72px;
     transform: translateY(-50%);
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1rem;
     margin-left: 10px;
     vertical-align: middle;
 }
 .txt-comp {
     font-weight: 500;
-    color: #fc5356;
-    font-size: 18px;
+    color: #0086ff;
+    font-size: 0.95rem;
 }
 
 .btn-acc {
