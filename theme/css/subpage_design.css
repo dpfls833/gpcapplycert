@@ -208,6 +208,7 @@ table { font-size:inherit; }
     border-collapse: collapse;
 }
 .in_table .bd_right { border-right:1px solid #ddd; }
+
  /*  등록정보조회 페이지 수평정렬 테이블  */
 .apply_table_horizon { text-align: center; }
 .apply_table_horizon thead { border-top: 1px solid #666666; }
@@ -218,6 +219,11 @@ table { font-size:inherit; }
 }
 .apply_table_horizon td { padding: 15px; }
 
+/* 제출문서 하단 코멘트 */
+.comment{
+    font-size:0.9rem;
+    color:#999;
+}
 
 /* ==== input ==== */
 input[type=text], 
