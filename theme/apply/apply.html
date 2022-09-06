@@ -143,6 +143,8 @@
                                                 <th scope="row" class="required">이메일</th>
                                                 <td>
                                                     <input type="text" id="email" name="email" value="test1@gmail.com">
+                                                    <input type="button" onclick="duplicatecheck()" value="중복확인" style="margin-left: 8px;">
+                                                    <p class="duplicate_text" style="color: #0086ff;margin: 0;">* 사용 가능한 이메일입니다.</p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -230,12 +232,12 @@
                                                 <th scope="row">현금영수증</th>
                                                 <td colspan="3">
                                                     <ul class="chk_recpt">
-                                                        <li>
+                                                        <li class="custom-control custom-checkbox">
                                                             <label class="type_radio"><input type="radio" name="recipt" value="1"> 소득공제용 </label>
-                                                            <label class="type_radio"><input type="radio" name="recipt" value="2"> 지출증빙용 </label>
-                                                            <label class="type_radio"><input type="radio" name="recipt" value="none"> 미발행 </label>
+                                                            <label class="type_radio"><input type="radio" name="recipt" value="1"> 지출증빙용 </label>
+                                                            <label class="type_radio"><input type="radio" name="recipt" value="0"> 미발행 </label>
                                                         </li>
-                                                        <input type="text" placeholder="발행 연락처" class="custom-control-input-text" style="margin-top:10px;">
+                                                        <input type="text" placeholder="발행 연락처" class="custom-control-input-text" style="margin-top:10px;" disabled="disabled">
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -716,15 +718,27 @@
     </script>
 
     <script>
+        // 중복확인 버튼 클릭시 이메일 사용여부 메세지 출력
+        $(".duplicate_text").hide();
+
+        function duplicatecheck() {
+            event.preventDefault();
+            $(".duplicate_text").show();
+        }
+    </script>
+
+    <script>
         // 영수증 발급 체크하면 텍스트박스 활성화되어 발행 연락처 입력 가능
-        $(".chk_recpt").attr("disabled", true);
-        $(".custom-control").on('click',function(){
-            var chk = $('input:checkbox[id="customCheck5"]').is(":checked");
-            if(chk==true){
-                $(".custom-control-input-text").removeAttr('disabled');
-            }else{
+        $(".custom-control-input-text").attr("disabled", true);
+        
+        $("input[name='recipt']").change(function(){
+            if($("input[name='recipt']:checked").val() == '1'){
+                $(".custom-control-input-text").attr("disabled", false);
+            }
+            else if($("input[name='recipt']:checked").val() == '0'){
                 $(".custom-control-input-text").attr("disabled", true);
             }
+
         });
     </script>
 
@@ -741,27 +755,7 @@
     </script>
 
     <script>
-        $(document).ready(function() {
-            // 라디오버튼 클릭시 이벤트 발생
-            $("input:radio[name=chk_tp]").click(function() {
-
-                if($("input[name=chk_tp]:checked").val() == "1") {
-                    $("input:text[name=cer_code]").attr("disabled",false);
-                    $("input:text[name=pass_word]").attr("disabled",false);
-                    // radio 버튼의 value 값이 1이라면 활성화
-
-                }else if($("input[name=chk_tp]:checked").val() == "0") {
-                    $("input:text[name=cer_code]").attr("disabled",true);
-                    $("input:text[name=pass_word]").attr("disabled",true);
-                    // radio 버튼의 value 값이 0이라면 비활성화
-                }
-            });
-        });
-    </script>
-
-    <script>
-            
-        const form = document.querySelector("#form__wrap"); // 전체 폼 영역
+        
         const checkAll = document.querySelector(".terms__check__all input"); // 전체 동의하기 체크박스
         const checkBoxes = document.querySelectorAll(".input__check input"); // 각각의 동의하기 체크박스
         const submitButton = document.querySelector("#submitAction"); // 확인(제출) 버튼

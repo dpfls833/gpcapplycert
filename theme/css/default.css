@@ -188,23 +188,5 @@ h5 { font-size: 1.8rem;font-weight: 500; }
     line-height: 3.24rem;
     border-radius: 0.26rem;
 }
-.btn-red { 
-    color: #fff;
-    background-color: #e63946;
-    border-color: #e63946;
-}
-.btn-red:hover {
-    color: #fff;
-    background-color: #dd1c2a;
-    border-color: #d21a28;
-}
-.btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
-}
-
-.pagination {
-    margin: 0 0 6rem;
-}
 
 
