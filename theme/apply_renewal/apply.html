@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="moodle, GPC 인증 신청 시스템" />
     <meta name="description" content="GPC 인증 신청 시스템" />
-    <title>GPC 인증 신청 시스템</title>
+    <title>GPC 인증 신청 시스템 - 갱신</title>
     <!-- 파비콘 연결 -->
     <link rel="shortcut icon" href="//3.36.181.167/pluginfile.php/1/theme_mb2nl/favicon/1655248541/favicon.ico" />
     <!-- Bootstrap 연결 -->
@@ -143,14 +143,14 @@
                                                 <th scope="row" class="required">이메일</th>
                                                 <td>
                                                     <input type="text" id="email" name="email" value="test1@gmail.com">
-                                                    <input type="button" onclick="duplicatecheck()" value="중복확인" style="margin-left: 8px;">
-                                                    <p class="duplicate_text" style="color: #0086ff;margin: 0;">* 사용 가능한 이메일입니다.</p>
+                                                    <input type="button" onclick="duplicatecheck()" value="중복확인" class="btn_basic btn_check" style="margin-left: 8px;">
+                                                    <p class="duplicate_text" style="color: #0086ff;margin:5px 0 0;font-size:0.9rem;">* 사용 가능한 이메일입니다.</p>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th scope="row" class="required">수령 주소</th>
                                                 <td colspan='3'>
-                                                    <input type="text" id="zipcode" name="zipcode" value="우편번호"> &nbsp;&nbsp;<button type="button" onclick="kakaopost()" id="btn_zip">우편번호확인</button> <br> 
+                                                    <input type="text" id="zipcode" name="zipcode" value="우편번호"> &nbsp;&nbsp;<button type="button" onclick="kakaopost()" id="btn_zip" class="btn_basic">우편번호확인</button> <br> 
                                                     <input type="text" id="address1" name="address1" value="주소"> <br>
                                                     <input type="text" id="address2" name="address2" value="상세주소"><input type="text" id="extraAddress" name="extraAddress" value="참고항목">
                                                 </td>
