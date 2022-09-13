@@ -269,7 +269,7 @@ input#address2, input#extraAddress { width:35%;margin-right:3px; } /* 상세주�
 button { cursor:pointer; } /* 버튼 */
 .btn { /* 파란색 버튼 */
     background:#0982ff;
-    border:none;
+    border:1px solid #0982ff; /* none */
     color:#fff;
     margin-top:40px;
     padding:8px 20px;
@@ -279,9 +279,19 @@ button { cursor:pointer; } /* 버튼 */
     transition:all 0.1s;
     line-height:1.5;
 }
-.btn:hover { 
-    background:#0370e1;
-    color:#fff; 
+.btn:hover { background:#0370e1;color:#fff; }
+.btn-outline-primary {
+    background: #fff;
+    border: 1px solid #0982ff;
+    color: #0982ff;
+}
+button#btn_zip { /* 우편번호확인 버튼 */
+    background:#aaa;
+    border:1px solid #aaa;
+    color:#fff;
+    padding:4px 8px;
+    font-size: 0.75rem;
+    vertical-align:top;
 }
 .btn_basic{ /* 기본 화이트 버튼 */
     background:#f9f9f9;
@@ -503,4 +513,20 @@ button#btn_zip, .btn_check { /* 우편번호확인/중복확인 버튼 */
     border-top: 1px solid #e5e5e5;
 }
 
+
 .collapse.in { display: block; }
+
+.tablet_block { display: none; }
+
+
+.search-form {
+    display: flex;
+}
+.search-form select {
+    width: 14%;
+    margin-right: 10px;
+}
+.search-form input[type=text] {
+    width: 30%;
+    margin-right: 10px;
+}
