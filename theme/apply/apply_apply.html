@@ -100,36 +100,61 @@
                                     </div>
                                     <div id="submiT" style="margin: 6rem 0;display:none;">
                                         <div>
-                                            <table class="apply_table_horizon">
-                                                <colgroup>
+                                            <table class="apply_table apply_table_horizon">
+                                                <colgroup class="tablet_none">
                                                     <col style="width:5%"> <!-- 순서 -->
-                                                    <col style="width:10%"> <!-- 이름 -->
-                                                    <col style="width:15%" class="only_pc"> <!-- 인증번호 -->
                                                     <col style="width:20%"> <!-- 신청규격 및 등급 -->
                                                     <col style="width:10%"> <!-- 유형 -->
+                                                    <col style="width:15%"> <!-- 인증번호 -->
+                                                    <col style="width:10%"> <!-- 이름 -->
                                                     <col style="width:20%"> <!-- 등록일 -->
                                                     <col style="width:10%"> <!-- 상세보기 -->
                                                 </colgroup>
-                                                <thead>
+                                                <thead class="tablet_none">
                                                     <tr>
-                                                        <th scope="col">순서</th>
-                                                        <th scope="col">이름</th>
-                                                        <th scope="col" class="only_pc">인증번호</th>
-                                                        <th scope="col">신청규격 및 등급</th>
-                                                        <th scope="col">유형</th>
-                                                        <th scope="col">등록일</th>
-                                                        <th scope="col">상세보기</th>
+                                                        <th scope="col" style="width:5%">순서</th>
+                                                        <th scope="col" style="width:20%">신청규격 및 등급</th>
+                                                        <th scope="col" style="width:10%">유형</th>
+                                                        <th scope="col" style="width:15%">인증번호</th>
+                                                        <th scope="col" style="width:10%">이름</th>
+                                                        <th scope="col" style="width:20%">등록일</th>
+                                                        <th scope="col" style="width:10%">상세보기</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr class="list_type01">
-                                                        <td>1</td>
-                                                        <td>김제니</td>
-                                                        <td class="only_pc">1912201137B11</td>
-                                                        <td>ISO 9001:2015(심사원)</td>
-                                                        <td>최초인증</td>
-                                                        <td>2021-08-08</td>
-                                                        <td><a href="../apply/apply_detail.html" class="btn_basic">열기</a></td>
+                                                    <tr class="table_list">
+                                                        <td class="tablet_none">1</td>
+                                                        <td class="iso_label">
+                                                            ISO 9001:2015(심사원)
+                                                            <a href="javascript:void(0);" class="mobile-arrow tablet_block"></a>
+                                                        </td>
+                                                        <td><span class="type_show tablet_block">유형 : </span>최초인증</td>
+                                                        <td><span class="type_show tablet_block">인증번호 : </span>12345678P</td>
+                                                        <td><span class="type_show tablet_block">신청자 : </span>홍길동</td>
+                                                        <td><span class="type_show tablet_block">등록일 : </span>2021-08-08 10:49:39</td>
+                                                        <td class="viewmore">
+                                                            <a href="../apply/apply_detail.html">
+                                                                <i class="fa-regular fa-square-plus plus-btn"></i>
+                                                                <span class="btn btn-primary tablet_block" style="margin: 0;">상세보기</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table_list">
+                                                        <td class="tablet_none">2</td>
+                                                        <td class="iso_label">
+                                                            ISO 9001:2015(심사원)
+                                                            <a href="javascript:void(0);" class="mobile-arrow tablet_block"></a>
+                                                        </td>
+                                                        <td><span class="type_show tablet_block">유형 : </span>최초인증</td>
+                                                        <td><span class="type_show tablet_block">인증번호 : </span>12345678P</td>
+                                                        <td><span class="type_show tablet_block">신청자 : </span>홍길동</td>
+                                                        <td><span class="type_show tablet_block">등록일 : </span>2021-08-08 10:49:39</td>
+                                                        <td class="viewmore">
+                                                            <a href="../apply/apply_detail.html">
+                                                                <i class="fa-regular fa-square-plus plus-btn"></i>
+                                                                <span class="btn btn-primary tablet_block" style="margin: 0;">상세보기</span>
+                                                            </a>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -156,7 +181,7 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="row">신청규격</th>
-                                                <td colspan='3'>
+                                                <td colspan='3' class="iso_check">
                                                     <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO9001"> ISO 9001:2015 </label>
                                                     <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO14001"> ISO 14001:2015 </label>
                                                     <label class="type_checkbox"><input type="checkbox" name="iso_standard" value="ISO13485"> ISO 13485:2016 </label>
@@ -283,6 +308,7 @@
             
         });
     </script>
+
     <script>
         // const 선언
         const idInput = document.getElementById('userID');
@@ -320,6 +346,38 @@
         const subMt = document.getElementById('submiT');
         subMt.style.display = 'block';
         }
+    </script>
+
+    <script>
+        // 태블릿&모바일 해상도일 때 mobile-arrow 클릭 시 상세 정보 보여줌
+        document.addEventListener("DOMContentLoaded", function(event) {
+        
+        var acc = document.getElementsByClassName("mobile-arrow");
+        var panel = document.getElementsByClassName("table_list");
+        var point_clk = document.getElementsByClassName("iso_label");
+        
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+                var setClasses = !this.classList.contains('active');
+                setClass(acc, 'active', 'remove');
+                setClass(panel, 'show', 'remove');
+                setClass(point_clk, 'active', 'remove');
+        
+                if (setClasses) {
+                    this.classList.toggle("active");
+                    this.parentElement.parentElement.classList.toggle("show");
+                    this.parentElement.classList.toggle("active");
+                }
+            }
+        }
+        
+        function setClass(els, className, fnName) {
+            for (var i = 0; i < els.length; i++) {
+                els[i].classList[fnName](className);
+            }
+        }
+        
+        });
     </script>
 </body>
 </html>

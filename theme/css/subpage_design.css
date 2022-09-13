@@ -190,7 +190,6 @@ table { font-size:inherit; }
     background: #f7f7f7;
 }
 .apply_table td {
-    /* width: 350px; */
     padding: 12px 20px;
     vertical-align: middle;
     border-bottom: 1px solid #ddd;
@@ -504,3 +503,5 @@ button#btn_zip, .btn_check { /* 우편번호확인/중복확인 버튼 */
 }
 
 .collapse.in { display: block; }
+
+.tablet_block { display: none; }
