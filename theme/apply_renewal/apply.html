@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="moodle, GPC 인증 신청 시스템" />
     <meta name="description" content="GPC 인증 신청 시스템" />
-    <title>GPC 인증 신청 시스템</title>
+    <title>GPC 인증 신청 시스템 - 갱신</title>
     <!-- 파비콘 연결 -->
     <link rel="shortcut icon" href="//3.36.181.167/pluginfile.php/1/theme_mb2nl/favicon/1655248541/favicon.ico" />
     <!-- Bootstrap 연결 -->
@@ -65,7 +65,7 @@
                                 <div class="step_navi">
                                     <ul>
                                         <li>
-                                            <a href="../apply/apply_apply.html">
+                                            <a href="../apply_renewal/apply_apply.html">
                                                 <p><span>STEP 1.</span>자격정보 입력</p>
                                             </a>
                                         </li>
@@ -74,7 +74,7 @@
                                             <div class="arrow arrow-right"></div>
                                         </li>
                                         <li>
-                                            <a href="../apply/apply_confirm.html">
+                                            <a href="../apply_renewal/apply_confirm.html">
                                                 <p><span>STEP 3.</span>등록 신청 완료</p>
                                             </a>
                                         </li>
@@ -117,12 +117,12 @@
                                                     </select>
                                                 </td>
                                                 <th scope="row">유형</th>
-                                                <td>최초인증</td>
+                                                <td>갱신</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">신청규격 및 등급</th>
                                                 <td colspan="3">
-                                                    ISO 9001:2015(심사원)
+                                                    ISO 9001:2015(심사원), ISO 13485:2016(심사원)
                                                 </td>
                                             </tr>
                                             <tr>
@@ -161,8 +161,8 @@
                                                     <table class="in_table">
                                                         <colgroup>
                                                             <col style="width:30%"> <!-- 구분 -->
-                                                            <col style="width:45%"> <!-- 비고 -->
-                                                            <col style="width:25%"> <!-- 다운로드 -->
+                                                            <col style="width:50%"> <!-- 비고 -->
+                                                            <col style="width:20%"> <!-- 다운로드 -->
                                                         </colgroup>
                                                         <tbody style="border-top: 1px solid #ddd;">
                                                             <tr>
@@ -175,37 +175,69 @@
                                                                 </td>
                                                                 <td>
                                                                     <div class="btn_download">
-                                                                        <a href="#" download><span class="mobile_none">다운로드</span> <i class="fa-solid fa-download"></i></a>
+                                                                        <a href="#" download>다운로드 <i class="fa-solid fa-download"></i></a>
                                                                     </div>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="bd_right">심사일지</td>
                                                                 <td class="bd_right">
-                                                                    <label><input type="checkbox" name="document_chk" id="chk2" value="심사원 5맨데이, 선임 8맨데이" checked> 심사원 5맨데이, 선임 8맨데이</label>
+                                                                    <label><input type="checkbox" name="document_chk" id="chk1" value="심사원 5맨데이, 선임 8맨데이" checked> 심사원 5맨데이, 선임 8맨데이</label>
                                                                 </td>
                                                                 <td>
                                                                     <div class="btn_download">
-                                                                        <a href="#" download><span class="mobile_none">다운로드</span> <i class="fa-solid fa-download"></i></a>
+                                                                        <a href="#" download>다운로드 <i class="fa-solid fa-download"></i></a>
                                                                     </div>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="bd_right">교육훈련수료증</td>
+                                                                <td class="bd_right">기술 개발 활동(CPD)</td>
                                                                 <td class="bd_right">
-                                                                    <label><input type="checkbox" name="document_chk" id="chk4" value="교육수료"> 교육수료</label>
+                                                                    <label><input type="checkbox" name="document_chk" id="chk2" value="기술개발활동" checked> 기술개발활동</label>
                                                                 </td>
                                                                 <td>
-
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="in_table">
+                                                        <colgroup>
+                                                            <col style="width:30%"> <!-- 구분 -->
+                                                            <col style="width:50%"> <!-- 비고 -->
+                                                            <col style="width:20%"> <!-- 다운로드 -->
+                                                        </colgroup>
+                                                        <tbody style="border-top: 1px solid #ddd;">
+                                                            <tr>
+                                                                <td colspan='3' style="font-weight:600;">ISO 13485:2016(심사원)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="bd_right">이력서</td>
+                                                                <td class="bd_right">
+                                                                    <label><input type="checkbox" name="document_chk" id="chk1" value="실무경력포함" checked> 실무경력포함</label>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="btn_download">
+                                                                        <a href="#" download>다운로드 <i class="fa-solid fa-download"></i></a>
+                                                                    </div>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="bd_right">학력증명서</td>
+                                                                <td class="bd_right">심사일지</td>
                                                                 <td class="bd_right">
-                                                                    <label><input type="checkbox" name="document_chk" id="chk5" value="고등학교졸업이상"> 고등학교졸업이상</label>
+                                                                    <label><input type="checkbox" name="document_chk" id="chk1" value="심사원 5맨데이, 선임 8맨데이" checked> 심사원 5맨데이, 선임 8맨데이</label>
                                                                 </td>
                                                                 <td>
-                                                                    
+                                                                    <div class="btn_download">
+                                                                        <a href="#" download>다운로드 <i class="fa-solid fa-download"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="bd_right">기술 개발 활동(CPD)</td>
+                                                                <td class="bd_right">
+                                                                    <label><input type="checkbox" name="document_chk" id="chk2" value="기술개발활동" checked> 기술개발활동</label>
+                                                                </td>
+                                                                <td>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -224,7 +256,7 @@
                                             <tr>
                                                 <th scope="row">비용</th>
                                                 <td colspan="3">
-                                                    <strong style="font-weight: 600;">110,000원 (<span>부가세포함</span>)</strong>
+                                                    <strong style="font-weight: 600;">220,000원 (<span>부가세포함</span>)</strong>
                                                 </td>
                                             </tr>
                                             <tr>
