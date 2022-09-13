@@ -115,76 +115,6 @@
 
     table.respncv_none tbody, table.respncv_none td, table.respncv_none tfoot, table.respncv_none th, table.respncv_none thead, table.respncv_none tr { display: revert; }
 
-    /* ------------------------------- 등록신청 페이지 ------------------------------- */
-    .only_pc{display: none;}
-    /* step navi */
-    .step_navi ul{ display:block; }
-    .step_navi ul li{
-        width: calc(100%/2 - 3px);
-        margin-right:0px;
-        margin-bottom:3px;
-        line-height: 1.8;
-    }
-    .step_navi ul li p{ 
-        font-size:0.95rem;
-        font-weight: 400; 
-        padding:10px 15px; 
-    }
-    .arrow{ 
-        width:16px;
-        height:16px;
-        top: 28px;
-        right: 20px;
-     }
-     .arrow::after{ height:0; }
-
-     /* 테이블 */
-    .apply_table>thead, 
-    .apply_table>tbody, 
-    .apply_table>tbody>tr, 
-    .apply_table>tbody>tr>th, 
-    .apply_table>tbody>tr>td{ 
-        display: block; 
-    }
-    .apply_table>tbody th{ /* 테이블 넓이, 높이 조정 */
-        width:100%;
-        height:auto;
-    }
-    .apply_table>tbody>tr>td{ width:100%; }
-    .apply_table tbody th, .apply_table td{ padding:15px 10px; } /* 셀 내부 간격 조정 */
-    .apply_table_horizon thead th{ padding:15px 5px; } /* 수평정렬 테이블 제목 */
-    .apply_table_horizon td{ padding:15px 10px; } /* 수평정렬 테이블 컨텐츠 */
-    
-    input[type=text], input[type=number], input[type=tel], input[type=password], select{ width:100%; } /* input 넓이 조정 */
-    label.type_checkbox{ width:49%; }
-    .text_box_gray{  padding:15px; } /* 상단 제출서류 안내 박스 */
-    input#address1{ width:100%; } /* 우편번호주소 */
-    input#address2, input#extraAddress{ width: calc(100%/2 - 1.5px); }
-    input#extraAddress{ margin-right:0px; }
-    input#email{ width:82%; }
-
-    /* 인증 프로세스 */
-    .cert_process_box ul li{
-        width: 30.5%;
-        margin-right:2%;
-        margin-bottom:12px;  
-        background:#f5f5f5;
-    }
-    .arrow-next::after{
-        width:12px;
-        height:12px;
-        right: -20px;
-        bottom: 23px;
-    }
-    /* 개인정보 이용약관 */
-    .c-txt{ margin-top:10px; }
-    .tit-box{ height:70px; }
-    .chk-area{ padding: 18px 0 0 25px; }
-    .label{ right:80px; }
-
-    /* 입금내역안내 박스 */
-    .text-box_border{ padding:2rem; }
-
 
 }
 
@@ -210,25 +140,4 @@
 
     /* 심사원시험 > ISO 9001 */
     .btn-curi { text-align: center; }
-
-    /* ------------------------------- 등록신청 페이지 ------------------------------- */
-    /* 인증 프로세스 */
-    .cert_process_box ul li{
-        width: 100%;
-        margin-right:0;
-        margin-bottom:20px;  
-        background:#f5f5f5;
-    }
-    .arrow-next::after{
-        transform: rotate(135deg);
-        width:12px;
-        height:12px;
-        right: 50%;
-        bottom: -22px;
-    }
-    /* 테이블 */
-    input#email{ width:75%; }
-
-
-
 }
