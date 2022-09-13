@@ -268,7 +268,7 @@ button { cursor:pointer; } /* 버튼 */
 .apply_chk_btn_2 { width:60px; }
 .btn { /* 신청하기 버튼 */
     background:#0982ff;
-    border:none;
+    border:1px solid #0982ff; /* none */
     color:#fff;
     margin-top:40px;
     padding:8px 20px;
@@ -279,6 +279,11 @@ button { cursor:pointer; } /* 버튼 */
     line-height:1.5;
 }
 .btn:hover { background:#0370e1;color:#fff; }
+.btn-outline-primary {
+    background: #fff;
+    border: 1px solid #0982ff;
+    color: #0982ff;
+}
 button#btn_zip { /* 우편번호확인 버튼 */
     background:#aaa;
     border:1px solid #aaa;
@@ -521,4 +526,20 @@ button#submitAction:hover { background:#0370e1;}
     border-top: 1px solid #e5e5e5;
 }
 
+
 .collapse.in { display: block; }
+
+.tablet_block { display: none; }
+
+
+.search-form {
+    display: flex;
+}
+.search-form select {
+    width: 14%;
+    margin-right: 10px;
+}
+.search-form input[type=text] {
+    width: 30%;
+    margin-right: 10px;
+}
