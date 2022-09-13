@@ -227,7 +227,10 @@ table { font-size:inherit; }
     border-bottom: 1px solid #ddd;
 }
 .apply_table_horizon tbody { border-bottom: 1px solid #ddd; }
-.apply_table_horizon td { padding: 15px; }
+.apply_table_horizon td { 
+    padding: 15px; 
+    border-bottom: 1px solid #ddd;
+}
 
 /* 제출문서 하단 코멘트 */
 .comment{
@@ -283,7 +286,7 @@ button { cursor:pointer; } /* 버튼 */
 .btn_basic{ /* 기본 화이트 버튼 */
     background:#f9f9f9;
     border:1px solid #bbb;
-    padding:8px 15px;
+    padding:8px 12px;
     transition:all 0.1s;
     line-height:1.5;
     font-size: 0.9rem;
@@ -310,7 +313,7 @@ button#btn_zip, .btn_check { /* 우편번호확인/중복확인 버튼 */
 .btn_download a {
     display: inline-block;
     padding: 4px 12px;
-    font-size:0.9rem;
+    font-size:0.8rem;
 }
 .btn_download a:hover { 
     background:#20ad6b;

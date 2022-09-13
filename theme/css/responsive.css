@@ -175,6 +175,11 @@
         right: -20px;
         bottom: 23px;
     }
+    /* 개인정보 이용약관 */
+    .tit-box{ height:70px; }
+    .chk-area{ padding: 18px 0 0 25px; }
+    .chkBox input[type=checkbox]{  }
+
     /* 입금내역안내 박스 */
     .text-box_border{ padding:1.5rem 2rem; }
 
