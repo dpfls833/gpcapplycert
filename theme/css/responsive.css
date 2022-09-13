@@ -154,11 +154,6 @@
     /* 개인정보 이용약관 */
     .c-txt { margin-top: 6px; }
     .acc-lst .tit-box label { width: 100%; }
-
-
-
-
-    
     #form01 table.type01 tbody th { width: 100%; }
     #form01 table.type01 ul.chk li { flex-basis: 50%; }
 
@@ -185,9 +180,10 @@
     table.list td.custom_name { font-weight: 600; }
     table.list td.custom_name.active { color: #0d6efd; }
     table.list .list_typeN { display: inline-block;padding: 0 6px 0 0; }
-    .plus-btn { display: none; }
+    /* .plus-btn { display: none; } */
 
     table.respncv_none tbody, table.respncv_none td, table.respncv_none tfoot, table.respncv_none th, table.respncv_none thead, table.respncv_none tr { display: revert; }
+
 
 }
 
