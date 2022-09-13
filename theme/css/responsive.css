@@ -25,14 +25,13 @@
     }
 
     h3 { font-size: 6.8vw; }
-    h4 {}
     h4::after { left: 50%;transform: translateX(-50%); }
 
     .theme-iconnav { display: none; }
 
     .mobcenter1 { text-align: center!important; }
 
-
+    /* 네비게이션 */
     #main-navigation .col-md-12 {
         padding-left: 0;
         padding-right: 0;
@@ -61,7 +60,51 @@
     .lang-fullname { display: inline-block;padding: 0 0 0 10px; }
     .lang-shortname {display: none;}
 
-    .mobile-arrow {
+    .main-menu .dropdown>a:after { display: none; }
+
+    /* Table */
+    tbody, td, tfoot, th, thead, tr {
+        display: block;
+        height: auto;
+    }
+    .apply_table tbody th, .apply_table tbody td {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 수평정렬 테이블 */
+    .apply_table.apply_table_horizon .table_list {
+        height: 52px;
+        overflow: hidden;
+        text-align: left;
+    }
+    .apply_table.apply_table_horizon .table_list.show {
+        height: auto;
+    }
+    .apply_table.apply_table_horizon th, .apply_table.apply_table_horizon td { 
+        height: 52px;
+        padding: 12px 25px;
+    }
+    .apply_table.apply_table_horizon td {
+        background: #fff;
+    }
+    .apply_table.apply_table_horizon .iso_label {
+        font-weight: 500;
+        background: #f7f7f7;
+        position: relative;
+    }
+    .apply_table.apply_table_horizon .iso_label.active {
+        color: #0d6efd;
+    }
+    .apply_table.apply_table_horizon .viewmore {
+        padding: 0 0 10px;
+    }
+    .apply_table.apply_table_horizon .type_show {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    /* 수평정렬 테이블 모바일용 arrow 버튼 */
+    .apply_table.apply_table_horizon .mobile-arrow {
         display: block;
         width: 36px;
         height: 36px;
@@ -72,8 +115,9 @@
         margin-top: -18px;
         text-align: center;
         font-size: 18px;
+        color: #333;
     }
-    .mobile-arrow:before {
+    .apply_table.apply_table_horizon .mobile-arrow:before {
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
         font-size: inherit;
@@ -82,11 +126,39 @@
         -moz-osx-font-smoothing: grayscale;
         content: '\f107';
     }
-    .mobile-arrow.active:before {
+    .apply_table.apply_table_horizon .mobile-arrow.active:before {
         content: '\f106';
     }
-    .main-menu .dropdown>a:after { display: none; }
-    tbody, td, tfoot, th, thead, tr { display: block;height: auto; }
+
+    /* 자격정보 입력 > 신청규격 */
+    table.apply_table tbody td.iso_check {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    table.apply_table tbody td.iso_check label.type_checkbox {
+        flex-basis: 50%;
+    }
+
+    /* 신청자 정보 입력 > 제출문서 */
+    table.in_table tr {
+        display: flex;
+        justify-content: space-between;
+    }
+    table.in_table .bd_right { 
+        border-right: none;
+    }
+    table.in_table .no_download {
+        width: 48%;
+    }
+
+    /* 개인정보 이용약관 */
+    .c-txt { margin-top: 6px; }
+    .acc-lst .tit-box label { width: 100%; }
+
+
+
+
+    
     #form01 table.type01 tbody th { width: 100%; }
     #form01 table.type01 ul.chk li { flex-basis: 50%; }
 
@@ -126,20 +198,5 @@
         flex: 0 0 100%;
         width: 100%;
     }
-
-    /* 회사안내 > 회사소개 > OUR BUSINESS */
-    .con_business { margin: 0; }
-    .con_business .business_tt { margin-top: 2rem; }
-    .con_business .business_txt { 
-        flex-direction: column;
-        padding: 0 0 2rem;
-        border-bottom: 1px solid #ddd;
-    }
-    .con_business .business_txt:nth-child(6) { border: none; }
-    .con_business .circle_box { order: 1;margin: 1rem auto; }
-    .con_business .text_box { order: 2; }
-
-    /* 심사원시험 > ISO 9001 */
-    .btn-curi { text-align: center; }
 
 }
