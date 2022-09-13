@@ -161,6 +161,7 @@
     input#address1{ width:100%; } /* 우편번호주소 */
     input#address2, input#extraAddress{ width: calc(100%/2 - 1.5px); }
     input#extraAddress{ margin-right:0px; }
+    input#email{ width:82%; }
 
     /* 인증 프로세스 */
     .cert_process_box ul li{
@@ -176,12 +177,13 @@
         bottom: 23px;
     }
     /* 개인정보 이용약관 */
+    .c-txt{ margin-top:10px; }
     .tit-box{ height:70px; }
     .chk-area{ padding: 18px 0 0 25px; }
-    .chkBox input[type=checkbox]{  }
+    .label{ right:80px; }
 
     /* 입금내역안내 박스 */
-    .text-box_border{ padding:1.5rem 2rem; }
+    .text-box_border{ padding:2rem; }
 
 
 }
@@ -224,5 +226,9 @@
         right: 50%;
         bottom: -22px;
     }
+    /* 테이블 */
+    input#email{ width:75%; }
+
+
 
 }
