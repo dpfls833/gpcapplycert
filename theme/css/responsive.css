@@ -180,13 +180,20 @@
         width: 48%;
     }
 
+    /* 이메일란 */
+    .emailCell{ 
+        display:flex; 
+        flex-wrap:wrap;
+    }
+    input#email{ flex-basis:82%; }
+    .btn_check{ flex-basis:16%; }
+
     input[type=text], input[type=number], input[type=tel], input[type=password], select{ width:100%; } /* input 넓이 조정 */
     label.type_checkbox{ width:49%; }
     .text_box_gray{  padding:15px; } /* 상단 제출서류 안내 박스 */
     input#address1{ width:100%; } /* 우편번호주소 */
     input#address2, input#extraAddress{ width: calc(100%/2 - 1.5px); }
     input#extraAddress{ margin-right:0px; }
-    input#email{ width:82%; }
  
     /* 인증 프로세스 */
     .cert_process_box ul li{
@@ -266,6 +273,7 @@
         bottom: -22px;
     }
     /* 테이블 */
-    input#email{ width:75%; }
+    input#email{ flex-basis:76%; }
+    .btn_check{ flex-basis:20%; }
 
 }
