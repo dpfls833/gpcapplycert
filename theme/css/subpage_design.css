@@ -266,7 +266,8 @@ input#address2, input#extraAddress { width:35%;margin-right:3px; } /* 상세주�
 /*  button  */
 button { cursor:pointer; } /* 버튼 */
 .btn { /* 파란색 버튼 */
-    background:#0982ff;
+    /* background:#0982ff; */
+    background: #13bd6e;
     border:none;
     color:#fff;
     margin-top:40px;
@@ -278,8 +279,13 @@ button { cursor:pointer; } /* 버튼 */
     line-height:1.5;
 }
 .btn:hover { 
-    background:#0370e1;
+    /* background:#0370e1; */
+    background: #0ab163;
     color:#fff; 
+}
+.btn-primary:disabled{
+    background-color: #13bd6e;
+    border-color: #13bd6e;
 }
 .btn_basic{ /* 기본 화이트 버튼 */
     background:#f9f9f9;
@@ -305,22 +311,24 @@ button#btn_zip, .btn_check { /* 우편번호확인/중복확인 버튼 */
     display: table;
     width:auto;
     height:auto;
-    background:#13bd6e;
+    /* background:#13bd6e; */
+    background: #13bd6e;
     color:#fff;
-    transition:all 0.1s;
 }
 .btn_download a {
     display: inline-block;
     padding: 4px 12px;
     font-size:0.8rem;
+    transition:all 0.1s;
 }
 .btn_download a:hover { 
-    background:#20ad6b;
+    background:#0ab163;
     color:#fff;
 }
 .plus-btn { /* 상세보기 버튼 */
     font-size: 22px;
-    color: #0d6efd;
+    /* color: #0d6efd; */
+    color: #13bd6e;
     vertical-align: middle;
 }
 .btn-viewmore { display: none; }
@@ -457,7 +465,7 @@ button#btn_zip, .btn_check { /* 우편번호확인/중복확인 버튼 */
 }
 .txt-comp {
     font-weight: 500;
-    color: #0086ff;
+    color: #e63946;
     font-size: 0.9rem;
 }
 
