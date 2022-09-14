@@ -55,4 +55,4 @@ function kakaopost() {
         left: (window.screen.width / 3) - (width / 3),
         top: (window.screen.height / 2) - (height / 2)
     });
-}
+};

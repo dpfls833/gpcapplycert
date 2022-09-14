@@ -52,84 +52,62 @@
                                 <div class="content_tt" style="color:#27323a;">
                                     신청 상세내역
                                 </div>
+
                                 <!-- 신청내역 안내 -->
-                                <div style="margin: 0px 0px 80px;">
-                                    <h6 class="content_box_tt">사용자 정보</h6>
+                                <h6 class="content_box_tt content_box_tt2">신청내역 안내</h6>
+                                <div class="text_box_gray">
+                                    <span class="icon_comment material-symbols-outlined">check_circle</span> <span style="font-weight: 600;">김제니</span>님의 신청이 <span style="font-weight: 600;color: #e63946;">정상적으로 처리</span>되었습니다.
+                                </div>
+                                <form name="fm_write" class="" method="post" enctype="multipart/form-data" >
+                                <input type="hidden" id="hand" name="hand" value="reg">
                                     <table class="apply_table">
+                                        <thead>
+                                            <tr style="display:none">
+                                                <th scope="cols"></th>
+                                                <th scope="cols"></th>
+                                            </tr>
+                                        </thead>
                                         <tbody>
                                             <tr>
-                                                <th scope="row">이름(한글)</th>
-                                                <td>김제니</td>
-                                                <th scope="row">이름(영문)</th>
-                                                <td>jennykim</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">연락처</th>
-                                                <td>010-1234-5678</td>
-                                                <th scope="row">이메일</th>
-                                                <td>test1@gmail.com</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">주소</th>
-                                                <td colspan="3">서울시 강남구 역삼동</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <h6 class="content_box_tt">신청 내역</h6>
-                                    <table class="apply_table">
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">신청규격</th>
-                                                <td>ISO 9001:2015</td>
+                                                <th scope="row">성명</th>
+                                                <td>
+                                                    김제니
+                                                </td>
                                                 <th class="tablet_none" style="background: #fff;"></th>
                                                 <td class="tablet_none"></td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">등급</th>
-                                                <td>심사원</td>
-                                                <th scope="row">유형</th>
-                                                <td>최초인증</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">인증번호</th>
-                                                <td colspan="3">1912201137B11</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">결제금액</th>
-                                                <td colspan="3">110,000원</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">현금영수증</th>
-                                                <td>소득공제</td>
-                                                <th scope="row">발행 연락처</th>
-                                                <td>010-1234-5678</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">제출문서</th>
+                                                <th scope="row">신청규격</th>
                                                 <td colspan="3">
-                                                    <a href="#" style="color: #0d6efd;text-decoration: underline;" download>최초인증_김제니(20010624)</a>
+                                                    ISO 9001:2015
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">신청일</th>
-                                                <td>2021-08-08 10:49:39</td>
-                                                <th scope="row">진행상황</th>
-                                                <td>접수</td>
+                                                <th scope="row">등급</th>
+                                                <td>
+                                                    심사원
+                                                </td>
+                                                <th scope="row">유형</th>
+                                                <td>
+                                                    최초인증
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">요청사항</th>
-                                                <td colspan="3">
-                                                    <textarea name="requests" wrap="virtual" style="width: 100%;min-height: 100px;border: 1px solid #ddd;"></textarea>
+                                                <th scope="row">결제금액</th>
+                                                <td>
+                                                    110,000원
+                                                </td>
+                                                <th scope="row">결제수단</th>
+                                                <td>
+                                                    무통장입금
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div style="text-align:center;">
-                                        <a href="" class="btn">수정하기</a>
-                                        <a href="javascript::" id="applyDelete" class="btn">삭제하기</a>
-                                        <a href="javascript:history.back()" class="btn back_btn">목록보기</a>
-                                        <a href="../apply/apply_apply.html" class="btn">처음으로 ></a>
-                                    </div>
+                                </form>
+
+                                <div style="text-align:center;">
+                                    <a href="../apply/list.html" class="btn">돌아가기 ></a>
                                 </div>
                             </div>
                             <!-- END : form wrap  -->
@@ -165,14 +143,6 @@
     <script>
         window.onscroll = function() {scrollFunction()};
         includeHTML();
-    </script>
-
-    <script>
-        $("#applyDelete").click(function(){
-            alert( "정말로 삭제하시겠습니까?" );
-            location.href="apply_delete.html";
-        });
-    </script>
-
+    </script> 
 </body>
 </html>
